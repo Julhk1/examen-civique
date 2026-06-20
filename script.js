@@ -1512,7 +1512,7 @@ const DATABASE_QUESTIONS = [
 let examQuestions = []; // Questions de la session en cours
 let current = 0;
 let score = 0;
-let time = 300;
+let time = 900; // 15 minutes chrono (15 * 60 secondes)
 let timer;
 let currentMode = ""; // "suivi", "flash", "erreurs"
 
@@ -1529,7 +1529,7 @@ function startExam(mode) {
   current = 0;
   score = 0;
   sessionErrors = [];
-  time = 300; 
+  time = 900; // 15 minutes chrono
 
   // Récupération des données sauvegardées dans la mémoire locale (LocalStorage)
   let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
@@ -1566,12 +1566,16 @@ function startExam(mode) {
     examQuestions.sort(() => Math.random() - 0.5);
   }
 
-  // Configuration de l'interface graphique
+  // Initialisation de l'affichage détaillé des scores
+  document.getElementById("score-bon").innerText = 0;
+  document.getElementById("score-faux").innerText = 0;
+  document.getElementById("score-repondu").innerText = 0;
   document.getElementById("current-total-q").innerText = examQuestions.length;
+  
+  // Configuration de l'interface graphique
   document.getElementById("home-screen").style.display = "none";
   document.getElementById("result-screen").style.display = "none";
   document.getElementById("quiz-box").style.display = "block";
-  document.getElementById("score").innerText = score;
 
   // Lancement du Chronomètre
   clearInterval(timer);
@@ -1608,7 +1612,6 @@ function showQuestion() {
       if (i === q.correct) {
         score++;
         btn.classList.add("correct-ans");
-        // Si on répond juste en mode "erreurs", on l'enlèvera de la liste des erreurs à la fin
       } else {
         btn.classList.add("wrong-ans");
         allButtons[q.correct].classList.add("correct-ans");
@@ -1616,7 +1619,11 @@ function showQuestion() {
         sessionErrors.push(q.id); 
       }
 
-      document.getElementById("score").innerText = score;
+      // Mise à jour de l'affichage détaillé du score en direct
+      document.getElementById("score-bon").innerText = score;
+      document.getElementById("score-faux").innerText = sessionErrors.length;
+      document.getElementById("score-repondu").innerText = current + 1;
+
       document.getElementById("feedback").innerHTML = `<strong>💡 Explication :</strong> ${q.explanation}`;
       document.getElementById("feedback").style.display = "block";
       document.getElementById("next-btn").style.display = "block";
@@ -1636,6 +1643,38 @@ function nextQuestion() {
   }
 }
 
+function quitterEnCoursExamen() {
+  if (confirm("Voulez-vous vraiment quitter l'examen ? Vos réponses actuelles seront sauvegardées (sauf si vous êtes en mode aléatoire).")) {
+    clearInterval(timer);
+    
+    // Sauvegarde anticipée des données si on n'est pas en mode flash
+    if (currentMode === 'suivi' || currentMode === 'erreurs') {
+      let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
+
+      // Enregistrer les erreurs commises sur les questions répondues
+      sessionErrors.forEach(id => {
+        if (!erreursGlobales.includes(id)) erreursGlobales.push(id);
+      });
+
+      // Si on révisait ses erreurs, on retire celles validées avec succès
+      if (currentMode === 'erreurs') {
+        for (let k = 0; k <= current; k++) {
+          let qTraitee = examQuestions[k];
+          if (qTraitee && !sessionErrors.includes(qTraitee.id)) {
+            erreursGlobales = erreursGlobales.filter(id => id !== qTraitee.id);
+          }
+        }
+      }
+      localStorage.setItem('civique_erreurs', JSON.stringify(erreursGlobales));
+    }
+
+    // Retour à l'écran d'accueil
+    document.getElementById("quiz-box").style.display = "none";
+    document.getElementById("home-screen").style.display = "block";
+    calculerEtAfficherStats();
+  }
+}
+
 function finDeLExamen() {
   document.getElementById("quiz-box").style.display = "none";
   document.getElementById("result-screen").style.display = "block";
@@ -1643,16 +1682,14 @@ function finDeLExamen() {
   document.getElementById("final-score").innerText = score;
   document.getElementById("final-total").innerText = examQuestions.length;
 
-  // Traitement de la mémoire persistante selon le mode joué
+  // Traitement de la mémoire persistante en fin d'examen complet
   if (currentMode === 'suivi' || currentMode === 'erreurs') {
     let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
-    // 1. Ajouter les nouvelles erreurs commises
     sessionErrors.forEach(id => {
       if (!erreursGlobales.includes(id)) erreursGlobales.push(id);
     });
 
-    // 2. Si on est en mode révision d'erreurs, enlever celles qui ont été réussies
     if (currentMode === 'erreurs') {
       examQuestions.forEach(q => {
         if (!sessionErrors.includes(q.id)) {
@@ -1674,16 +1711,18 @@ function finDeLExamen() {
 }
 
 function refaireErreursImmediatement() {
-  // On filtre pour ne garder que les questions échouées lors de cette session
   examQuestions = DATABASE_QUESTIONS.filter(q => sessionErrors.includes(q.id));
   current = 0;
   score = 0;
-  sessionErrors = []; // On vide pour la nouvelle sous-session
+  sessionErrors = []; 
   
+  document.getElementById("score-bon").innerText = 0;
+  document.getElementById("score-faux").innerText = 0;
+  document.getElementById("score-repondu").innerText = 0;
   document.getElementById("current-total-q").innerText = examQuestions.length;
+  
   document.getElementById("result-screen").style.display = "none";
   document.getElementById("quiz-box").style.display = "block";
-  document.getElementById("score").innerText = score;
 
   showQuestion();
 }
@@ -1707,7 +1746,6 @@ function calculerEtAfficherStats() {
   document.getElementById("global-restant").innerText = Math.max(0, total - vus.length);
   document.getElementById("global-erreurs").innerText = erreurs.length;
 
-  // Afficher le bouton de la boîte à erreurs seulement s'il y a des fautes dedans
   let btnErreurs = document.getElementById("mode-erreurs-btn");
   if (erreurs.length > 0) {
     btnErreurs.innerText = `🔄 Réviser la boîte à erreurs (${erreurs.length} questions)`;
