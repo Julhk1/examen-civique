@@ -14,17 +14,60 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  max-width: 600px;
+  max-width: 650px;
   width: 100%;
   text-align: center;
-  border-top: 8px solid #002395; /* Bleu France */
+  border-top: 8px solid #002395;
 }
 
-h1 { 
-  color: #333; 
-  margin-bottom: 20px;
-  font-size: 24px;
+h1 { color: #333; margin-bottom: 20px; font-size: 24px; }
+h2 { font-size: 18px; color: #444; margin: 20px 0; }
+
+.stats-globales {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left;
 }
+.stats-globales h3 { margin-top: 0; color: #002395; }
+.stats-globales p { margin: 5px 0; font-size: 15px; }
+
+.menu-boutons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn-principal {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #002395;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-principal:hover { background-color: #001a70; }
+.btn-secondaire { background-color: #475569; }
+.btn-secondaire:hover { background-color: #334155; }
+.btn-rouge { background-color: #dc2626; }
+.btn-rouge:hover { background-color: #b91c1c; }
+
+.btn-reset {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+.btn-reset:hover { color: #64748b; }
 
 #info {
   display: flex;
@@ -32,59 +75,23 @@ h1 {
   margin-bottom: 20px;
   font-weight: bold;
 }
+.stat-box { background: #f0f0f0; padding: 8px 15px; border-radius: 20px; }
 
-.stat-box {
-  background: #f0f0f0;
-  padding: 8px 15px;
-  border-radius: 20px;
-}
-
-#answers {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px 0;
-}
+#answers { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
 
 button {
   padding: 12px;
-  font-size: 16px;
+  font-size: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.2s;
 }
+button:hover:not(:disabled) { background-color: #f0f4f8; border-color: #002395; }
 
-button:hover { 
-  background-color: #f0f4f8; 
-  border-color: #002395; 
-}
-
-#start-btn, #next-btn {
-  background-color: #002395;
-  color: white;
-  border: none;
-  font-weight: bold;
-  width: 100%;
-}
-
-#start-btn:hover, #next-btn:hover { 
-  background-color: #cc2429; /* Rouge France */
-}
-
-.correct-ans { 
-  background-color: #d4edda !important; 
-  color: #155724; 
-  border-color: #c3e6cb; 
-  font-weight: bold; 
-}
-
-.wrong-ans { 
-  background-color: #f8d7da !important; 
-  color: #721c24; 
-  border-color: #f5c6cb; 
-}
+.correct-ans { background-color: #d4edda !important; color: #155724; border-color: #c3e6cb; font-weight: bold; }
+.wrong-ans { background-color: #f8d7da !important; color: #721c24; border-color: #f5c6cb; }
 
 .feedback-box {
   margin: 15px 0;
@@ -96,3 +103,4 @@ button:hover {
   text-align: left;
   line-height: 1.4;
 }
+.score-final { font-size: 22px; font-weight: bold; color: #002395; margin: 20px 0; }
