@@ -11,7 +11,7 @@ let questions = [
     q: "En France, qui détient le pouvoir législatif (vote les lois) ?",
     a: ["Le Président de la République", "Le Parlement (Assemblée nationale et Sénat)", "Le Premier ministre"],
     correct: 1,
-    explanation: "C'est le Parlement qui vote les lois. Le Président promulgue les lois et le Premier ministre dirige l'action du gouvernement."
+    explanation: "C'est le Parlement qui vote les lois. Le Président de la République promulgue les lois et le Premier ministre dirige l'action du gouvernement."
   },
   {
     level: "difficile",
@@ -64,7 +64,6 @@ function showQuestion() {
     btn.innerText = answer;
 
     btn.onclick = () => {
-      // Désactiver tous les boutons après le clic
       let allButtons = answersDiv.querySelectorAll("button");
       allButtons.forEach(b => b.disabled = true);
 
@@ -73,12 +72,11 @@ function showQuestion() {
         btn.classList.add("correct-ans");
       } else {
         btn.classList.add("wrong-ans");
-        allButtons[q.correct].classList.add("correct-ans"); // Montrer la bonne réponse
+        allButtons[q.correct].classList.add("correct-ans");
       }
 
       document.getElementById("score").innerText = score;
       
-      // Afficher l'explication
       let fb = document.getElementById("feedback");
       fb.innerHTML = `<strong>💡 Explication :</strong> ${q.explanation}`;
       fb.style.display = "block";
