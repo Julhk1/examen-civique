@@ -1509,17 +1509,15 @@ const DATABASE_QUESTIONS = [
 // ==========================================
 // ⚙️ GESTION DU SYSTÈME ET DU JEU
 // ==========================================
-let examQuestions = []; // Questions de la session en cours
+let examQuestions = []; 
 let current = 0;
 let score = 0;
-let time = 900; // 15 minutes chrono (15 * 60 secondes)
+let time = 900; // 15 minutes chrono
 let timer;
-let currentMode = ""; // "suivi", "flash", "erreurs"
+let currentMode = ""; 
 
-// Liste des IDs ratés durant la session actuelle
 let sessionErrors = []; 
 
-// Au chargement du site, on calcule et affiche l'état de la mémoire du candidat
 window.onload = function() {
   calculerEtAfficherStats();
 };
@@ -1529,55 +1527,42 @@ function startExam(mode) {
   current = 0;
   score = 0;
   sessionErrors = [];
-  time = 900; // 15 minutes chrono
+  time = 900; 
 
-  // Récupération des données sauvegardées dans la mémoire locale (LocalStorage)
   let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
   let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
   if (mode === 'suivi') {
-    // Filtrer les questions pour ne garder que celles JAMAIS vues
     let nonVues = DATABASE_QUESTIONS.filter(q => !vus.includes(q.id));
     
-    // Si on a épuisé tout le stock de questions neuves !
     if (nonVues.length === 0) {
       alert("🎉 Félicitations ! Vous avez traité 100% des questions du code. Utilisez le bouton en bas pour réinitialiser la mémoire et tout refaire.");
       return;
     }
     
-    // Mélanger les questions non vues
     nonVues.sort(() => Math.random() - 0.5);
-    // Prendre un maximum de 40 questions (ou moins s'il en reste moins)
     examQuestions = nonVues.slice(0, 40);
 
-    // Enregistrer immédiatement ces questions comme "vues" dans la mémoire
-    examQuestions.forEach(q => { if(!vus.includes(q.id)) vus.push(q.id); });
-    localStorage.setItem('civique_vus', JSON.stringify(vus));
-
   } else if (mode === 'flash') {
-    // Mode Flash : 40 questions totalement au hasard dans TOUTE la base, sans distinction
     let copieBase = [...DATABASE_QUESTIONS];
     copieBase.sort(() => Math.random() - 0.5);
     examQuestions = copieBase.slice(0, 40);
 
   } else if (mode === 'erreurs') {
-    // Mode Révision des fautes enregistrées
     examQuestions = DATABASE_QUESTIONS.filter(q => erreursGlobales.includes(q.id));
     examQuestions.sort(() => Math.random() - 0.5);
   }
 
-  // Initialisation de l'affichage détaillé des scores
+  // Initialisation des éléments de l'affichage détaillé des compteurs
   document.getElementById("score-bon").innerText = 0;
   document.getElementById("score-faux").innerText = 0;
   document.getElementById("score-repondu").innerText = 0;
   document.getElementById("current-total-q").innerText = examQuestions.length;
   
-  // Configuration de l'interface graphique
   document.getElementById("home-screen").style.display = "none";
   document.getElementById("result-screen").style.display = "none";
   document.getElementById("quiz-box").style.display = "block";
 
-  // Lancement du Chronomètre
   clearInterval(timer);
   timer = setInterval(() => {
     time--;
@@ -1615,11 +1600,19 @@ function showQuestion() {
       } else {
         btn.classList.add("wrong-ans");
         allButtons[q.correct].classList.add("correct-ans");
-        // Enregistrer la faute dans la session en cours
         sessionErrors.push(q.id); 
       }
 
-      // Mise à jour de l'affichage détaillé du score en direct
+      // 🔄 SAUVEGARDE EN DIRECT : Enregistre la question comme "étudiée" uniquement si l'on clique dessus
+      if (currentMode === 'suivi') {
+        let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
+        if (!vus.includes(q.id)) {
+          vus.push(q.id);
+          localStorage.setItem('civique_vus', JSON.stringify(vus));
+        }
+      }
+
+      // Rafraîchissement dynamique du bloc des scores
       document.getElementById("score-bon").innerText = score;
       document.getElementById("score-faux").innerText = sessionErrors.length;
       document.getElementById("score-repondu").innerText = current + 1;
@@ -1647,16 +1640,13 @@ function quitterEnCoursExamen() {
   if (confirm("Voulez-vous vraiment quitter l'examen ? Vos réponses actuelles seront sauvegardées (sauf si vous êtes en mode aléatoire).")) {
     clearInterval(timer);
     
-    // Sauvegarde anticipée des données si on n'est pas en mode flash
     if (currentMode === 'suivi' || currentMode === 'erreurs') {
       let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
-      // Enregistrer les erreurs commises sur les questions répondues
       sessionErrors.forEach(id => {
         if (!erreursGlobales.includes(id)) erreursGlobales.push(id);
       });
 
-      // Si on révisait ses erreurs, on retire celles validées avec succès
       if (currentMode === 'erreurs') {
         for (let k = 0; k <= current; k++) {
           let qTraitee = examQuestions[k];
@@ -1668,7 +1658,6 @@ function quitterEnCoursExamen() {
       localStorage.setItem('civique_erreurs', JSON.stringify(erreursGlobales));
     }
 
-    // Retour à l'écran d'accueil
     document.getElementById("quiz-box").style.display = "none";
     document.getElementById("home-screen").style.display = "block";
     calculerEtAfficherStats();
@@ -1682,7 +1671,6 @@ function finDeLExamen() {
   document.getElementById("final-score").innerText = score;
   document.getElementById("final-total").innerText = examQuestions.length;
 
-  // Traitement de la mémoire persistante en fin d'examen complet
   if (currentMode === 'suivi' || currentMode === 'erreurs') {
     let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
@@ -1701,7 +1689,6 @@ function finDeLExamen() {
     localStorage.setItem('civique_erreurs', JSON.stringify(erreursGlobales));
   }
 
-  // Afficher ou masquer le bouton de rattrapage immédiat
   let retryBtn = document.getElementById("retry-errors-now");
   if (sessionErrors.length > 0) {
     retryBtn.style.display = "block";
@@ -1733,9 +1720,6 @@ function retourAccueil() {
   calculerEtAfficherStats();
 }
 
-// ==========================================
-// 📊 UTILITAIRES DE COMPTAGE ET DE CONFIG
-// ==========================================
 function calculerEtAfficherStats() {
   let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
   let erreurs = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
