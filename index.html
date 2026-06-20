@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Préparation Examen Civique</title>
+  <title>Préparation Examen Civique Pro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,20 +11,58 @@
   <div class="quiz-container">
     <h1>🇫🇷 Entraînement Examen Civique</h1>
 
-    <div id="info">
-      <div class="stat-box">⏱ Temps : <span id="timer">60</span>s</div>
-      <div class="stat-box">🧮 Score : <span id="score">0</span></div>
+    <!-- Écran d'accueil et choix des modes -->
+    <div id="home-screen">
+      <div class="stats-globales">
+        <h3>📊 Votre progression globale :</h3>
+        <p>Questions étudiées : <span id="global-vus">0</span> / <span id="global-total">0</span></p>
+        <p>Questions restant à réviser : <span id="global-restant">0</span></p>
+        <p>Questions dans la boîte à erreurs ❌ : <span id="global-erreurs">0</span></p>
+      </div>
+
+      <div class="menu-boutons">
+        <button id="mode-suivi-btn" class="btn-principal" onclick="startExam('suivi')">
+          🚀 Mode Suivi Continu (40 questions inédites)
+        </button>
+        <button id="mode-flash-btn" class="btn-principal btn-secondaire" onclick="startExam('flash')">
+          ⚡ Mode Aléatoire Flash (Sans enregistrer)
+        </button>
+        <button id="mode-erreurs-btn" class="btn-principal btn-rouge" onclick="startExam('erreurs')" style="display:none;">
+          🔄 Réviser uniquement la Boîte à Erreurs
+        </button>
+      </div>
+
+      <button class="btn-reset" onclick="resetToutLeCode()">🗑️ Effacer la mémoire et repartir de zéro</button>
     </div>
 
+    <!-- Écran du Questionnaire pendant le jeu -->
     <div id="quiz-box" style="display: none;">
-      <div id="progress">Question 1/3</div>
+      <div id="info">
+        <div class="stat-box">⏱ Temps : <span id="timer">300</span>s</div>
+        <div class="stat-box">🧮 Score : <span id="score">0</span> / <span id="current-total-q">0</span></div>
+      </div>
+      <div id="progress">Question 1/40</div>
       <h2 id="question"></h2>
       <div id="answers"></div>
       <div id="feedback" class="feedback-box" style="display: none;"></div>
       <button id="next-btn" style="display: none;" onclick="nextQuestion()">Question suivante ➡️</button>
     </div>
 
-    <button id="start-btn" onclick="startExam()">Commencer l'examen</button>
+    <!-- Écran des résultats de fin d'examen -->
+    <div id="result-screen" style="display: none;">
+      <h2>🎉 Examen Terminé !</h2>
+      <p class="score-final">Votre score : <span id="final-score">0</span> / <span id="final-total">0</span></p>
+      
+      <div id="result-actions" class="menu-boutons">
+        <button id="retry-errors-now" class="btn-principal" onclick="refaireErreursImmediatement()">
+          🔄 Refaire tout de suite mes erreurs de cette session
+        </button>
+        <button class="btn-principal btn-secondaire" onclick="retourAccueil()">
+          🚪 Quitter et enregistrer mes erreurs pour plus tard
+        </button>
+      </div>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
