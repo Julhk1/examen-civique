@@ -1586,24 +1586,40 @@ function showQuestion() {
   let answersDiv = document.getElementById("answers");
   answersDiv.innerHTML = "";
 
-  q.a.forEach((answer, i) => {
+  // 🔀 Créer un tableau d'objets pour mélanger les réponses sans perdre l'index de la bonne
+  let reponsesMelangees = q.a.map((reponse, index) => {
+    return { texte: reponse, estBonne: index === q.correct };
+  });
+  
+  // Secouer l'ordre des réponses au hasard
+  reponsesMelangees.sort(() => Math.random() - 0.5);
+
+  // Générer les boutons avec l'ordre aléatoire
+  reponsesMelangees.forEach((item) => {
     let btn = document.createElement("button");
-    btn.innerText = answer;
+    btn.innerText = item.texte;
+    btn.classList.add("answer-btn"); // Nouvelle classe CSS pour le style épuré
 
     btn.onclick = () => {
       let allButtons = answersDiv.querySelectorAll("button");
       allButtons.forEach(b => b.disabled = true);
 
-      if (i === q.correct) {
+      // Vérifier si le bouton cliqué est le bon
+      if (item.estBonne) {
         score++;
         btn.classList.add("correct-ans");
       } else {
         btn.classList.add("wrong-ans");
-        allButtons[q.correct].classList.add("correct-ans");
+        // Trouver et colorer le bon bouton qui s'était caché ailleurs
+        reponsesMelangees.forEach((recherche, indexRecherche) => {
+          if (recherche.estBonne) {
+            allButtons[indexRecherche].classList.add("correct-ans");
+          }
+        });
         sessionErrors.push(q.id); 
       }
 
-      // 🔄 SAUVEGARDE EN DIRECT : Enregistre la question comme "étudiée" uniquement si l'on clique dessus
+      // Sauvegarde en direct (Mode Suivi Continu)
       if (currentMode === 'suivi') {
         let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
         if (!vus.includes(q.id)) {
@@ -1612,13 +1628,21 @@ function showQuestion() {
         }
       }
 
-      // Rafraîchissement dynamique du bloc des scores
+      // Mise à jour des compteurs visuels
       document.getElementById("score-bon").innerText = score;
       document.getElementById("score-faux").innerText = sessionErrors.length;
       document.getElementById("score-repondu").innerText = current + 1;
 
-      document.getElementById("feedback").innerHTML = `<strong>💡 Explication :</strong> ${q.explanation}`;
-      document.getElementById("feedback").style.display = "block";
+      // Affichage du feedback à la façon de l'image 345b97.png
+      let fb = document.getElementById("feedback");
+      if (item.estBonne) {
+        fb.innerHTML = `<div class="fb-title">✅ Bonne réponse !</div><p>💡 ${q.explanation}</p>`;
+        fb.className = "feedback-box fb-success";
+      } else {
+        fb.innerHTML = `<div class="fb-title">❌ Mauvaise réponse...</div><p>💡 ${q.explanation}</p>`;
+        fb.className = "feedback-box fb-error";
+      }
+      fb.style.display = "block";
       document.getElementById("next-btn").style.display = "block";
     };
 
