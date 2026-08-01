@@ -1752,36 +1752,114 @@ function setDifficulte(niveau) {
 }
 
 // Pioche un distracteur supplémentaire plausible pris parmi les réponses
-// (bonnes ou mauvaises) d'autres questions du même thème, pour éviter
-// qu'on repère la bonne réponse simplement parce que les autres options
-// "n'ont rien à voir".
+// (bonnes ou mauvaises) d'autres questions. L'objectif n'est pas seulement
+// de rester dans le même thème, mais surtout de proposer un piège qui a la
+// MÊME FORME que les 3 vraies réponses (même longueur, même motif — par ex.
+// un âge parmi des âges, une courte formule parmi des courtes formules) afin
+// qu'on ne puisse pas l'éliminer au premier coup d'œil parce qu'il "n'a rien
+// à voir" avec les autres options.
 function pickDistractor(q) {
   let dejaPresentes = q.a.map(t => t.trim().toLowerCase());
 
-  let construireBassin = (filtre) => {
-    let bassin = [];
+  let longueurs = q.a.map(t => t.trim().length);
+  let longueurMoyenne = longueurs.reduce((a, b) => a + b, 0) / longueurs.length;
+  let longueurMax = Math.max(...longueurs);
+
+  // Détecte un motif partagé par les 3 vraies réponses (ex : toutes finissent
+  // par "ans", "%", "jours"...). Un piège qui suit ce motif est le plus
+  // trompeur possible.
+  let dernierMot = (texte) => {
+    let mots = texte.trim().split(/\s+/);
+    return mots[mots.length - 1].toLowerCase().replace(/[^a-zàâäéèêëïîôöùûüÿçœæ0-9%]/gi, '');
+  };
+  let motifs = q.a.map(dernierMot);
+  let motifCommun = motifs.every(m => m === motifs[0] && m.length > 1) ? motifs[0] : null;
+
+  let toutesLesReponses = () => {
+    let liste = [];
     DATABASE_QUESTIONS.forEach(autre => {
       if (autre.id === q.id) return;
-      if (!filtre(autre)) return;
       autre.a.forEach(texte => {
         let clean = texte.trim();
-        if (!dejaPresentes.includes(clean.toLowerCase()) && clean.length >= 3) {
-          bassin.push(clean);
+        let key = clean.toLowerCase();
+        if (!dejaPresentes.includes(key) && clean.length >= 2) {
+          liste.push({ texte: clean, theme: autre.theme, macro: autre.macro });
         }
       });
     });
-    return bassin;
+    return liste;
   };
 
-  // 1) priorité : autres questions du même sous-thème
-  let bassin = construireBassin(autre => autre.theme === q.theme);
-  // 2) repli : même grand thème
-  if (bassin.length === 0) bassin = construireBassin(autre => autre.macro === q.macro);
-  // 3) dernier repli : toute la base
-  if (bassin.length === 0) bassin = construireBassin(() => true);
+  let bassinComplet = toutesLesReponses();
 
-  if (bassin.length === 0) return null;
-  return bassin[Math.floor(Math.random() * bassin.length)];
+  // 0) Cas particulier : réponses purement numériques (années, quantités...).
+  //    Dans ce cas, un piège doit impérativement être un autre nombre du
+  //    même ordre de grandeur — un nom de pays ou une phrase n'a rien à y faire.
+  let toutNumerique = q.a.every(t => /^\d+$/.test(t.trim()));
+  if (toutNumerique) {
+    let chiffresRef = q.a.map(t => t.trim().length);
+    let longueurCible = chiffresRef.sort((a, b) =>
+      chiffresRef.filter(v => v === a).length - chiffresRef.filter(v => v === b).length
+    ).pop(); // longueur (nb de chiffres) la plus fréquente parmi les vraies réponses
+
+    let bassinNum = bassinComplet.filter(c => /^\d+$/.test(c.texte.trim()));
+    let memeGrandeur = bassinNum.filter(c => c.texte.trim().length === longueurCible);
+    let poolNum = memeGrandeur.length > 0 ? memeGrandeur : bassinNum;
+
+    if (poolNum.length > 0) {
+      let memeTheme = poolNum.filter(c => c.theme === q.theme);
+      let choix = memeTheme.length > 0 ? memeTheme : poolNum;
+      return choix[Math.floor(Math.random() * choix.length)].texte;
+    }
+  }
+
+  // 1) Priorité absolue : même motif final (même unité / même construction),
+  //    mais toujours filtré par une longueur raisonnablement proche des
+  //    vraies réponses — sinon on retomberait sur une phrase entière qui se
+  //    termine par le même mot mais n'a clairement pas la même forme.
+  if (motifCommun) {
+    let limiteHaute = longueurMax * 1.8 + 12;
+    let bassinMotif = bassinComplet.filter(c =>
+      dernierMot(c.texte) === motifCommun && c.texte.length <= limiteHaute
+    );
+    if (bassinMotif.length > 0) {
+      bassinMotif.sort((a, b) =>
+        Math.abs(a.texte.length - longueurMoyenne) - Math.abs(b.texte.length - longueurMoyenne)
+      );
+      let memeTheme = bassinMotif.filter(c => c.theme === q.theme);
+      let pool = memeTheme.length > 0 ? memeTheme : bassinMotif;
+      let top = pool.slice(0, Math.min(4, pool.length));
+      return top[Math.floor(Math.random() * top.length)].texte;
+    }
+  }
+
+  // 2) Sinon : on cherche une réponse de longueur très proche de la moyenne
+  //    des vraies réponses, pour rester homogène visuellement, en priorisant
+  //    le même thème puis le même grand thème puis toute la base.
+  let filtrerParForme = (liste, tolerance) => liste.filter(c => {
+    let l = c.texte.length;
+    return Math.abs(l - longueurMoyenne) <= tolerance && l <= longueurMax * 1.5 + 8;
+  });
+
+  let etapes = [
+    () => filtrerParForme(bassinComplet.filter(c => c.theme === q.theme), Math.max(8, longueurMoyenne * 0.45)),
+    () => filtrerParForme(bassinComplet.filter(c => c.macro === q.macro), Math.max(8, longueurMoyenne * 0.45)),
+    () => filtrerParForme(bassinComplet, Math.max(8, longueurMoyenne * 0.45)),
+    () => filtrerParForme(bassinComplet, Math.max(20, longueurMoyenne * 0.9)),
+    () => bassinComplet
+  ];
+
+  for (let etape of etapes) {
+    let bassin = etape();
+    if (bassin.length > 0) {
+      // Trie par proximité de longueur, puis pioche au hasard parmi les mieux assortis
+      bassin.sort((a, b) => Math.abs(a.texte.length - longueurMoyenne) - Math.abs(b.texte.length - longueurMoyenne));
+      let top = bassin.slice(0, Math.min(6, bassin.length));
+      return top[Math.floor(Math.random() * top.length)].texte;
+    }
+  }
+
+  return null;
 }
 
 function startExam(mode) {
