@@ -1,220 +1,501 @@
-/* 📱 Configuration globale et typographie épurée */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f8fa;
-  margin: 0;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
+/* ==========================================================
+   DOSSIER DE PRÉPARATION — EXAMEN CIVIQUE
+   Palette et typographie inspirées des documents officiels
+   français (bleu Marianne, rouge institutionnel, vert de
+   validation), avec une mise en page de type "dossier papier".
+   ========================================================== */
+
+:root {
+  --bleu-france: #000091;
+  --bleu-hover: #1212ff;
+  --bleu-clair: #ECECFF;
+  --rouge-marianne: #C9184A;
+  --rouge-clair: #FFE9EC;
+  --vert-valide: #18753C;
+  --vert-clair: #EDF7EE;
+  --ambre: #B34000;
+  --ambre-clair: #FFF3E7;
+
+  --fond: #EEEEF2;
+  --papier: #FFFFFF;
+  --texte: #1B1B24;
+  --texte-doux: #55555F;
+  --texte-faible: #8A8A94;
+  --bordure: #DEDEE5;
+
+  --display: "Fraunces", Georgia, serif;
+  --corps: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --radius: 10px;
+  --ombre: 0 1px 2px rgba(20, 20, 40, 0.04), 0 8px 24px rgba(20, 20, 40, 0.06);
 }
 
-/* 📦 Conteneur principal adaptatif (Mobile & Bureau) */
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--corps);
+  background-color: var(--fond);
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(0, 0, 145, 0.05), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgba(201, 24, 74, 0.04), transparent 40%);
+  margin: 0;
+  padding: 32px 16px 48px;
+  color: var(--texte);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dossier {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------
+   En-tête : bandeau tricolore + intitulé officiel
+   --------------------------------------------- */
+.dossier-header {
+  background: var(--papier);
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-shadow: var(--ombre);
+  overflow: hidden;
+}
+
+.tricolore {
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    var(--bleu-france) 0%, var(--bleu-france) 33.33%,
+    #FFFFFF 33.33%, #FFFFFF 66.66%,
+    var(--rouge-marianne) 66.66%, var(--rouge-marianne) 100%
+  );
+}
+
+.header-inner {
+  padding: 28px 28px 24px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bleu-france);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.dossier-header h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.22;
+  color: var(--texte);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.dossier-footer {
+  text-align: center;
+  padding: 18px 20px 0;
+}
+.dossier-footer p {
+  font-size: 12px;
+  color: var(--texte-faible);
+  margin: 0;
+}
+
+/* ---------------------------------------------
+   Conteneur principal du quiz
+   --------------------------------------------- */
 .quiz-container {
-  background: white;
-  padding: 25px 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
+  background: var(--papier);
+  padding: 26px 26px 30px;
+  box-shadow: var(--ombre);
   width: 100%;
   box-sizing: border-box;
-  border-top: 6px solid #2563eb; /* Bleu moderne */
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
-h1 { 
-  color: #1e293b; 
-  margin-top: 0;
-  margin-bottom: 20px; 
-  font-size: 22px; 
-  font-weight: 700;
-}
-
-/* Style de la question (Comme sur votre image) */
-h2 { 
-  font-size: 20px; 
-  color: #0f172a; 
-  margin: 25px 0 20px 0; 
+h2 {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--texte);
+  margin: 10px 0 22px;
   text-align: left;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.42;
 }
 
-/* 📊 Tableau des statistiques de l'accueil */
+/* ---------------------------------------------
+   Bloc de progression (accueil)
+   --------------------------------------------- */
 .stats-globales {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 15px;
-  border-radius: 12px;
-  margin-bottom: 25px;
+  background: var(--fond);
+  border: 1px solid var(--bordure);
+  padding: 20px 20px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 22px;
   text-align: left;
 }
-.stats-globales h3 { margin-top: 0; color: #2563eb; font-size: 16px; }
-.stats-globales p { margin: 6px 0; font-size: 14px; color: #475569; }
 
+.stats-globales h3 {
+  margin: 0 0 14px;
+  color: var(--texte);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-item {
+  flex: 1;
+  background: var(--papier);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.stat-item-alert { border-color: rgba(201, 24, 74, 0.25); }
+
+.stat-num {
+  display: block;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--bleu-france);
+}
+
+.stat-item-alert .stat-num { color: var(--rouge-marianne); }
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: var(--texte-doux);
+  margin-top: 3px;
+}
+
+.stats-total {
+  font-size: 12px;
+  color: var(--texte-faible);
+  margin: 12px 2px 0;
+}
+
+/* ---------------------------------------------
+   Sélecteur de niveau de difficulté
+   --------------------------------------------- */
+.niveau-select { margin-bottom: 22px; }
+
+.niveau-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--texte-doux);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+}
+
+.niveau-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.niveau-btn {
+  background: var(--papier);
+  border: 1.5px solid var(--bordure);
+  border-radius: 10px;
+  padding: 12px 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.niveau-btn:hover { border-color: var(--bleu-france); }
+
+.niveau-btn.active {
+  border-color: var(--bleu-france);
+  background: var(--bleu-clair);
+}
+
+.niveau-titre {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--texte);
+}
+
+.niveau-btn.active .niveau-titre { color: var(--bleu-france); }
+
+.niveau-desc {
+  font-size: 11.5px;
+  color: var(--texte-doux);
+  line-height: 1.3;
+}
+
+/* ---------------------------------------------
+   Boutons du menu d'accueil
+   --------------------------------------------- */
 .menu-boutons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 15px;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
-/* 🔘 Boutons du menu d'accueil */
 .btn-principal {
-  padding: 16px;
-  font-size: 15px;
+  padding: 15px 18px;
+  font-size: 14.5px;
   font-weight: 600;
-  background-color: #2563eb;
+  font-family: var(--corps);
+  background-color: var(--bleu-france);
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 9px;
   cursor: pointer;
-  transition: transform 0.1s, background-color 0.2s;
+  text-align: left;
+  transition: transform 0.08s, background-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
-.btn-principal:hover { background-color: #1d4ed8; }
-.btn-principal:active { transform: scale(0.98); }
-.btn-secondaire { background-color: #475569; }
-.btn-secondaire:hover { background-color: #334155; }
-.btn-rouge { background-color: #dc2626; }
-.btn-rouge:hover { background-color: #b91c1c; }
+.btn-principal:hover { background-color: var(--bleu-hover); }
+.btn-principal:active { transform: scale(0.99); }
+
+.btn-sub {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.78;
+}
+
+.btn-secondaire { background-color: #33333E; }
+.btn-secondaire:hover { background-color: #1F1F27; }
+.btn-rouge { background-color: var(--rouge-marianne); }
+.btn-rouge:hover { background-color: #A50F3D; }
 
 .btn-reset {
   background: none;
   border: none;
-  color: #94a3b8;
-  font-size: 13px;
+  color: var(--texte-faible);
+  font-size: 12.5px;
+  font-family: var(--corps);
   cursor: pointer;
   text-decoration: underline;
-  margin-top: 15px;
+  text-underline-offset: 2px;
+  margin-top: 14px;
+  padding: 4px 0;
 }
+.btn-reset:hover { color: var(--rouge-marianne); }
 
-/* ⏱️ Barre d'infos du Quiz */
+/* ---------------------------------------------
+   Barre d'infos du Quiz
+   --------------------------------------------- */
 #info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 15px;
-  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
 }
-.stat-box { 
-  background: #f1f5f9; 
-  padding: 8px 14px; 
-  border-radius: 30px; 
-  color: #334155;
+.stat-box {
+  background: var(--fond);
+  padding: 6px 12px;
+  border-radius: 30px;
+  color: var(--texte-doux);
   font-weight: 600;
+  font-family: var(--mono);
+  font-size: 12.5px;
 }
+
+.diff-badge {
+  background: var(--rouge-clair);
+  color: var(--rouge-marianne);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+/* Chrono par question (mode difficile) */
+#qtimer-wrap {
+  height: 4px;
+  background: var(--bordure);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+#qtimer-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--bleu-france);
+  border-radius: 4px;
+}
+#qtimer-bar.qtimer-low { background: var(--rouge-marianne); }
 
 #progress {
   text-align: left;
-  font-size: 13px;
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 4px 12px;
+  font-size: 11.5px;
+  font-family: var(--mono);
+  background: var(--bleu-clair);
+  color: var(--bleu-france);
+  padding: 4px 11px;
   border-radius: 20px;
   display: inline-block;
   font-weight: 600;
 }
 
-/* 🗂️ Zone des Réponses (Boutons larges, épurés, style image 345b97) */
-#answers { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 12px; 
-  margin: 20px 0; 
+.theme-tag {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--texte-faible);
+  font-style: italic;
+}
+
+/* ---------------------------------------------
+   Zone des réponses
+   --------------------------------------------- */
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0;
 }
 
 .answer-btn {
-  padding: 18px 20px;
-  font-size: 15px;
+  padding: 15px 18px;
+  font-size: 14.5px;
+  font-family: var(--corps);
   text-align: left;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  background-color: #ffffff;
-  color: #334155;
+  border: 1.5px solid var(--bordure);
+  border-radius: 10px;
+  background-color: var(--papier);
+  color: var(--texte);
   cursor: pointer;
-  transition: all 0.2s;
-  line-height: 1.3;
+  transition: all 0.15s;
+  line-height: 1.35;
   font-weight: 500;
 }
-.answer-btn:hover:not(:disabled) { 
-  background-color: #f8fafc; 
-  border-color: #cbd5e1; 
+.answer-btn:hover:not(:disabled) {
+  background-color: var(--fond);
+  border-color: var(--bleu-france);
 }
+.answer-btn:disabled { cursor: default; }
 
-/* 🎉 États Correct / Incorrect (Style image 345b97) */
-.correct-ans { 
-  background-color: #ecfdf5 !important; 
-  color: #065f46 !important; 
-  border: 2px solid #10b981 !important; 
+.correct-ans {
+  background-color: var(--vert-clair) !important;
+  color: var(--vert-valide) !important;
+  border: 1.5px solid var(--vert-valide) !important;
   font-weight: 600;
 }
-.wrong-ans { 
-  background-color: #fef2f2 !important; 
-  color: #991b1b !important; 
-  border: 2px solid #ef4444 !important; 
+.wrong-ans {
+  background-color: var(--rouge-clair) !important;
+  color: var(--rouge-marianne) !important;
+  border: 1.5px solid var(--rouge-marianne) !important;
 }
 
-/* 💡 Boîtes d'explications stylisées */
+/* ---------------------------------------------
+   Boîtes d'explication
+   --------------------------------------------- */
 .feedback-box {
-  margin: 20px 0;
-  padding: 16px;
-  border-radius: 14px;
-  font-size: 14px;
+  margin: 18px 0;
+  padding: 15px 16px;
+  border-radius: 10px;
+  font-size: 13.5px;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.55;
 }
-.fb-title { font-weight: 700; margin-bottom: 6px; font-size: 15px; }
-.feedback-box p { margin: 0; color: #334155; }
+.fb-title { font-weight: 700; margin-bottom: 5px; font-size: 14px; }
+.feedback-box p { margin: 0; color: var(--texte); }
 
-.fb-success { background-color: #f0fdf4; border-left: 4px solid #10b981; color: #166534; }
-.fb-error { background-color: #fffbeb; border-left: 4px solid #f59e0b; color: #92400e; }
+.fb-success { background-color: var(--vert-clair); border-left: 3px solid var(--vert-valide); }
+.fb-error { background-color: var(--ambre-clair); border-left: 3px solid var(--ambre); }
 
-.score-final { font-size: 24px; font-weight: 700; color: #2563eb; margin: 20px 0; }
+.score-final {
+  font-family: var(--mono);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--bleu-france);
+  margin: 16px 0 22px;
+}
 
-/* 🛠️ Barre d'actions du bas */
+/* ---------------------------------------------
+   Barre d'actions du bas
+   --------------------------------------------- */
 .action-quiz-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 12px;
-  margin-top: 25px;
+  gap: 10px;
+  margin-top: 22px;
 }
 
 .btn-quit-mid {
-  background-color: #f1f5f9;
-  color: #64748b;
-  border: 1px solid #e2e8f0;
+  background-color: var(--fond);
+  color: var(--texte-doux);
+  border: 1px solid var(--bordure);
   font-weight: 600;
-  padding: 14px 18px;
-  border-radius: 12px;
-  font-size: 14px;
+  font-family: var(--corps);
+  padding: 13px 16px;
+  border-radius: 9px;
+  font-size: 13px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
-.btn-quit-mid:hover { background-color: #e2e8f0; color: #475569; }
+.btn-quit-mid:hover { background-color: var(--bordure); }
 
 #next-btn {
-  background-color: #2563eb;
+  background-color: var(--bleu-france);
   color: white;
   border: none;
   font-weight: 600;
-  padding: 14px 20px;
-  border-radius: 12px;
-  font-size: 15px;
+  font-family: var(--corps);
+  padding: 13px 18px;
+  border-radius: 9px;
+  font-size: 14px;
   cursor: pointer;
   flex-grow: 1;
-  transition: background-color 0.2s;
+  transition: background-color 0.15s;
 }
-#next-btn:hover { background-color: #1d4ed8; }
+#next-btn:hover { background-color: var(--bleu-hover); }
 
-/* 📱 Ajustements spécifiques pour très petits écrans de téléphones */
+/* ---------------------------------------------
+   Accessibilité — focus visible
+   --------------------------------------------- */
+button:focus-visible {
+  outline: 2px solid var(--bleu-france);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------
+   Petits écrans
+   --------------------------------------------- */
 @media (max-width: 480px) {
-  body { padding: 10px; }
-  .quiz-container { padding: 20px 15px; border-radius: 12px; }
-  h1 { font-size: 19px; }
+  body { padding: 16px 10px 32px; }
+  .header-inner { padding: 22px 20px 18px; }
+  .dossier-header h1 { font-size: 22px; }
+  .quiz-container { padding: 20px 18px 24px; }
   h2 { font-size: 17px; }
-  .answer-btn { padding: 14px 16px; font-size: 14px; }
+  .answer-btn { padding: 13px 15px; font-size: 14px; }
+  .niveau-toggle { grid-template-columns: 1fr; }
   .action-quiz-bar { flex-direction: column-reverse; }
   .btn-quit-mid { width: 100%; padding: 12px; }
+  .stats-grid { flex-direction: column; }
+  .stat-item { display: flex; align-items: center; justify-content: space-between; text-align: left; padding: 10px 14px; }
+  .stat-num { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }
