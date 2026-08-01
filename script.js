@@ -1751,6 +1751,16 @@ function setDifficulte(niveau) {
   }
 }
 
+// Détecte la "formulation" d'une question (ses 1-2 premiers mots :
+// "quel est", "qui était", "que signifie"...) pour pouvoir rapprocher un
+// piège d'une question qui attend le MÊME TYPE de réponse (un nom propre,
+// une définition, une date...), plutôt qu'une réponse simplement de la
+// même longueur mais de nature complètement différente.
+function amorceQuestion(texteQuestion) {
+  let m = texteQuestion.trim().toLowerCase().match(/^([a-zàâäéèêëïîôöùûüÿçœæ']+(?:\s+[a-zàâäéèêëïîôöùûüÿçœæ']+)?)/);
+  return m ? m[1] : '';
+}
+
 // Pioche un distracteur supplémentaire plausible pris parmi les réponses
 // (bonnes ou mauvaises) d'autres questions. L'objectif n'est pas seulement
 // de rester dans le même thème, mais surtout de proposer un piège qui a la
@@ -1783,7 +1793,7 @@ function pickDistractor(q) {
         let clean = texte.trim();
         let key = clean.toLowerCase();
         if (!dejaPresentes.includes(key) && clean.length >= 2) {
-          liste.push({ texte: clean, theme: autre.theme, macro: autre.macro });
+          liste.push({ texte: clean, theme: autre.theme, macro: autre.macro, amorce: amorceQuestion(autre.q) });
         }
       });
     });
@@ -1791,6 +1801,11 @@ function pickDistractor(q) {
   };
 
   let bassinComplet = toutesLesReponses();
+
+  let filtrerParForme = (liste, tolerance) => liste.filter(c => {
+    let l = c.texte.length;
+    return Math.abs(l - longueurMoyenne) <= tolerance && l <= longueurMax * 1.5 + 8;
+  });
 
   // 0) Cas particulier : réponses purement numériques (années, quantités...).
   //    Dans ce cas, un piège doit impérativement être un autre nombre du
@@ -1833,32 +1848,28 @@ function pickDistractor(q) {
     }
   }
 
-  // 2) Sinon : on cherche une réponse de longueur très proche de la moyenne
-  //    des vraies réponses, pour rester homogène visuellement, en priorisant
-  //    le même thème puis le même grand thème puis toute la base.
-  let filtrerParForme = (liste, tolerance) => liste.filter(c => {
-    let l = c.texte.length;
-    return Math.abs(l - longueurMoyenne) <= tolerance && l <= longueurMax * 1.5 + 8;
-  });
-
-  let etapes = [
-    () => filtrerParForme(bassinComplet.filter(c => c.theme === q.theme), Math.max(8, longueurMoyenne * 0.45)),
-    () => filtrerParForme(bassinComplet.filter(c => c.macro === q.macro), Math.max(8, longueurMoyenne * 0.45)),
-    () => filtrerParForme(bassinComplet, Math.max(8, longueurMoyenne * 0.45)),
-    () => filtrerParForme(bassinComplet, Math.max(20, longueurMoyenne * 0.9)),
-    () => bassinComplet
-  ];
-
-  for (let etape of etapes) {
-    let bassin = etape();
-    if (bassin.length > 0) {
-      // Trie par proximité de longueur, puis pioche au hasard parmi les mieux assortis
-      bassin.sort((a, b) => Math.abs(a.texte.length - longueurMoyenne) - Math.abs(b.texte.length - longueurMoyenne));
-      let top = bassin.slice(0, Math.min(6, bassin.length));
+  // 2) Repli intelligent : une réponse venant d'une question posée de la
+  //    MÊME FAÇON ("Quel est...", "Qui était...", "Que signifie..."), donc
+  //    qui attend le même type de réponse (un nom, une définition, une
+  //    date...) — et dont la longueur reste homogène avec les 3 vraies
+  //    réponses. C'est ce qui évite qu'une question "Quel est le nom de..."
+  //    hérite d'un piège du type "Bleu, blanc, rouge".
+  let monAmorce = amorceQuestion(q.q);
+  if (monAmorce) {
+    let bassinAmorce = bassinComplet.filter(c => c.amorce === monAmorce);
+    let filtre = filtrerParForme(bassinAmorce, Math.max(10, longueurMoyenne * 0.55));
+    if (filtre.length > 0) {
+      filtre.sort((a, b) => Math.abs(a.texte.length - longueurMoyenne) - Math.abs(b.texte.length - longueurMoyenne));
+      let top = filtre.slice(0, Math.min(5, filtre.length));
       return top[Math.floor(Math.random() * top.length)].texte;
     }
   }
 
+  // Si aucun piège vraiment pertinent n'a été trouvé (ni numérique, ni motif
+  // commun, ni question formulée à l'identique ailleurs dans la base), on
+  // préfère ne PAS ajouter de 4e choix plutôt que de forcer une réponse qui
+  // n'a manifestement rien à voir avec le sujet. La question garde alors ses
+  // 3 réponses d'origine, qui sont déjà de bons pièges conçus à la main.
   return null;
 }
 
