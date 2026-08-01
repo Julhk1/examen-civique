@@ -3,71 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Préparation Examen Civique Pro</title>
+  <title>Dossier de préparation — Examen civique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="quiz-container">
-    <h1>🇫🇷 Entraînement Examen Civique</h1>
+  <div class="dossier">
 
-    <!-- Écran d'accueil et choix des modes -->
-    <div id="home-screen">
-      <div class="stats-globales">
-        <h3>📊 Votre progression globale :</h3>
-        <p>Questions étudiées : <span id="global-vus">0</span> / <span id="global-total">0</span></p>
-        <p>Questions restant à réviser : <span id="global-restant">0</span></p>
-        <p>Questions dans la boîte à erreurs ❌ : <span id="global-erreurs">0</span></p>
+    <header class="dossier-header">
+      <div class="tricolore" aria-hidden="true"></div>
+      <div class="header-inner">
+        <p class="eyebrow">République française · Naturalisation</p>
+        <h1>Dossier de préparation<br>à l'examen civique</h1>
+      </div>
+    </header>
+
+    <div class="quiz-container">
+
+      <!-- Écran d'accueil et choix des modes -->
+      <div id="home-screen">
+
+        <div class="stats-globales">
+          <h3>Votre progression</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-num" id="global-vus">0</span>
+              <span class="stat-label">étudiées</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" id="global-restant">0</span>
+              <span class="stat-label">restantes</span>
+            </div>
+            <div class="stat-item stat-item-alert">
+              <span class="stat-num" id="global-erreurs">0</span>
+              <span class="stat-label">à revoir</span>
+            </div>
+          </div>
+          <p class="stats-total">sur <span id="global-total">0</span> questions au programme</p>
+        </div>
+
+        <div class="niveau-select">
+          <p class="niveau-label">Niveau d'entraînement</p>
+          <div class="niveau-toggle">
+            <button id="diff-standard-btn" class="niveau-btn" onclick="setDifficulte('standard')">
+              <span class="niveau-titre">Standard</span>
+              <span class="niveau-desc">3 choix, rythme libre</span>
+            </button>
+            <button id="diff-difficile-btn" class="niveau-btn" onclick="setDifficulte('difficile')">
+              <span class="niveau-titre">Difficile</span>
+              <span class="niveau-desc">4 choix piégés, chrono par question</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-boutons">
+          <button id="mode-suivi-btn" class="btn-principal" onclick="startExam('suivi')">
+            Mode Suivi Continu
+            <span class="btn-sub">40 questions inédites, mémorisées au fil des sessions</span>
+          </button>
+          <button id="mode-flash-btn" class="btn-principal btn-secondaire" onclick="startExam('flash')">
+            Mode Aléatoire Flash
+            <span class="btn-sub">40 questions au hasard, sans enregistrement</span>
+          </button>
+          <button id="mode-erreurs-btn" class="btn-principal btn-rouge" onclick="startExam('erreurs')" style="display:none;">
+            Réviser la boîte à erreurs
+          </button>
+        </div>
+
+        <button class="btn-reset" onclick="resetToutLeCode()">Effacer la mémoire et repartir de zéro</button>
       </div>
 
-      <div class="menu-boutons">
-        <button id="mode-suivi-btn" class="btn-principal" onclick="startExam('suivi')">
-          🚀 Mode Suivi Continu (40 questions inédites)
-        </button>
-        <button id="mode-flash-btn" class="btn-principal btn-secondaire" onclick="startExam('flash')">
-          ⚡ Mode Aléatoire Flash (Sans enregistrer)
-        </button>
-        <button id="mode-erreurs-btn" class="btn-principal btn-rouge" onclick="startExam('erreurs')" style="display:none;">
-          🔄 Réviser uniquement la Boîte à Erreurs
-        </button>
-      </div>
+      <!-- Écran du Questionnaire pendant le jeu -->
+      <div id="quiz-box" style="display: none;">
+        <div id="info">
+          <div class="stat-box">⏱ <span id="timer">900</span>s</div>
+          <span id="diff-badge" class="diff-badge" style="display:none;">Mode difficile</span>
+          <div class="stat-box">
+            🟢 <span id="score-bon">0</span> · 🔴 <span id="score-faux">0</span> · <span id="score-repondu">0</span>/<span id="current-total-q">0</span>
+          </div>
+        </div>
 
-      <button class="btn-reset" onclick="resetToutLeCode()">🗑️ Effacer la mémoire et repartir de zéro</button>
-    </div>
+        <div id="qtimer-wrap" style="display:none;">
+          <div id="qtimer-bar"></div>
+        </div>
 
-    <!-- Écran du Questionnaire pendant le jeu -->
-    <div id="quiz-box" style="display: none;">
-      <div id="info">
-        <div class="stat-box">⏱ Temps : <span id="timer">900</span>s</div>
-        <div class="stat-box">
-          🟢 <span id="score-bon">0</span> | 🔴 <span id="score-faux">0</span> | 📦 <span id="score-repondu">0</span>/<span id="current-total-q">0</span>
+        <div id="progress">Question 1/40</div>
+        <p class="theme-tag" id="theme-tag"></p>
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+        <div id="feedback" class="feedback-box" style="display: none;"></div>
+
+        <div class="action-quiz-bar">
+          <button id="exit-mid-btn" class="btn-quit-mid" onclick="quitterEnCoursExamen()">Quitter et sauvegarder</button>
+          <button id="next-btn" style="display: none;" onclick="nextQuestion()">Question suivante →</button>
         </div>
       </div>
-      <div id="progress">Question 1/40</div>
-      <h2 id="question"></h2>
-      <div id="answers"></div>
-      <div id="feedback" class="feedback-box" style="display: none;"></div>
-       
-      <div class="action-quiz-bar">
-        <button id="exit-mid-btn" class="btn-quit-mid" onclick="quitterEnCoursExamen()">🚪 Quitter et sauvegarder</button>
-        <button id="next-btn" style="display: none;" onclick="nextQuestion()">Question suivante ➡️</button>
+
+      <!-- Écran des résultats de fin d'examen -->
+      <div id="result-screen" style="display: none;">
+        <p class="eyebrow">Résultat</p>
+        <h2>Examen terminé</h2>
+        <p class="score-final"><span id="final-score">0</span> / <span id="final-total">0</span></p>
+
+        <div id="result-actions" class="menu-boutons">
+          <button id="retry-errors-now" class="btn-principal" onclick="refaireErreursImmediatement()">
+            Refaire tout de suite mes erreurs de cette session
+          </button>
+          <button class="btn-principal btn-secondaire" onclick="retourAccueil()">
+            Quitter et enregistrer mes erreurs pour plus tard
+          </button>
+        </div>
       </div>
+
     </div>
 
-    <!-- Écran des résultats de fin d'examen -->
-    <div id="result-screen" style="display: none;">
-      <h2>🎉 Examen Terminé !</h2>
-      <p class="score-final">Votre score : <span id="final-score">0</span> / <span id="final-total">0</span></p>
-      
-      <div id="result-actions" class="menu-boutons">
-        <button id="retry-errors-now" class="btn-principal" onclick="refaireErreursImmediatement()">
-          🔄 Refaire tout de suite mes erreurs de cette session
-        </button>
-        <button class="btn-principal btn-secondaire" onclick="retourAccueil()">
-          🚪 Quitter et enregistrer mes erreurs pour plus tard
-        </button>
-      </div>
-    </div>
+    <footer class="dossier-footer">
+      <p>Outil d'entraînement personnel — ne remplace pas le livret officiel de l'OFII.</p>
+    </footer>
 
   </div>
 
