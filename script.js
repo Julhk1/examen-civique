@@ -6,6 +6,7 @@ const DATABASE_QUESTIONS = [
   // --- La devise, les symboles et les grands principes ---
   {
     id: "T1_Q1",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quelle est la devise de la République française ?",
     a: ["Liberté, Égalité, Solidarité", "Liberté, Égalité, Fraternité", "Justice, Unité, Travail"],
     correct: 1,
@@ -13,6 +14,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q2",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quelle est la langue officielle de la République française ?",
     a: ["Le français et l'anglais", "Le français", "Le français et les langues régionales"],
     correct: 1,
@@ -20,6 +22,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q3",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quel est le nom de l'hymne national ?",
     a: ["Le Chant des Partisans", "La Marseillaise", "L'Ode à la Joie"],
     correct: 1,
@@ -27,6 +30,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q4",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quelles sont les couleurs du drapeau français ?",
     a: ["Bleu, blanc, rouge", "Rouge, blanc, bleu", "Vert, blanc, rouge"],
     correct: 0,
@@ -34,6 +38,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q5",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quel symbole de la République française est tricolore ?",
     a: ["La Marianne", "Le drapeau français", "Le coq gaulois"],
     correct: 1,
@@ -41,6 +46,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q6",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Qui est Marianne ?",
     a: ["Une reine historique", "Le symbole officiel de la République française représentant la liberté et la raison", "La première femme présidente"],
     correct: 1,
@@ -48,6 +54,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q7",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Lequel de ces symboles représente officiellement la République française ?",
     a: ["La fleur de lys", "Marianne (figure féminine symbolisant la République)", "La croix de Lorraine"],
     correct: 1,
@@ -55,6 +62,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q8",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quels sont des symboles officiels de la République française ?",
     a: ["Le drapeau tricolore, la Marseillaise, Marianne, la devise, et le coq gaulois", "Le château de Versailles, le vin et le fromage", "La tour Eiffel, la baguette et la haute couture"],
     correct: 0,
@@ -62,6 +70,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q9",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Quel animal est un symbole de la France ?",
     a: ["L'aigle impérial", "Le coq gaulois", "Le lion britannique"],
     correct: 1,
@@ -69,6 +78,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q10",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "À quelle date est la fête nationale française ?",
     a: ["Le 1er mai", "Le 14 juillet", "Le 11 novembre"],
     correct: 1,
@@ -76,6 +86,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q11",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Qu'est-ce qui est traditionnellement organisé sur les Champs-Élysées le 14 juillet ?",
     a: ["Une course cycliste internationale", "Un défilé militaire", "Un grand marché de nuit"],
     correct: 1,
@@ -83,6 +94,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q12",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Le régime de la France est :",
     a: ["Une Monarchie constitutionnelle", "Une République", "Un État fédéral"],
     correct: 1,
@@ -90,6 +102,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q13",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "De quand date la Constitution de la Ve République ?",
     a: ["Du 14 juillet 1789", "Du 4 octobre 1958", "Du 8 mai 1945"],
     correct: 1,
@@ -97,6 +110,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q14",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "\"La France est une République indivisible, ..., démocratique et sociale\". Complétez :",
     a: ["fédérale", "laïque", "décentralisée"],
     correct: 1,
@@ -104,6 +118,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q15",
+    theme: "La devise, les symboles et les grands principes", macro: "Thème 1 — Symboles et principes",
     q: "Où peut-on voir la devise de la République ?",
     a: ["Uniquement sur les documents du Parlement", "Sur les bâtiments publics, les pièces et billets de monnaie, ainsi que sur les documents officiels", "Uniquement à l'intérieur des tribunaux"],
     correct: 1,
@@ -113,6 +128,7 @@ const DATABASE_QUESTIONS = [
   // --- Les grandes libertés ---
   {
     id: "T1_Q16",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Que signifie la liberté ?",
     a: ["Le droit de faire tout ce que l'on veut sans limites légales", "Le droit de faire tout ce qui ne nuit pas à autrui et qui n'est pas interdit par la loi", "Le droit d'ignorer les décisions de justice"],
     correct: 1,
@@ -120,6 +136,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q17",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Quelle liberté permet à chacun d'exprimer ses idées ?",
     a: ["La liberté d'association", "La liberté d'expression", "La liberté de circulation"],
     correct: 1,
@@ -127,6 +144,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q18",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Quelle proposition est correcte ? La liberté d'expression :",
     a: ["Est absolue et permet les insultes haineuses et menaces", "Permet d'exprimer ses idées librement, mais ne protège pas les propos incitant à la haine, à la discrimination ou à la violence", "N'existe pas pour les simples citoyens"],
     correct: 1,
@@ -134,6 +152,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q19",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Que signifie l'égalité ?",
     a: ["Que tout le monde doit percevoir le même revenu exact", "Que tous les citoyens ont les mêmes droits et les mêmes devoirs devant la loi, sans distinction", "Que toutes les opinions ont la même valeur scientifique"],
     correct: 1,
@@ -141,6 +160,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q20",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Qu'est-ce que l'égalité ?",
     a: ["C'est le principe selon lequel tous les individus sont traités de la même façon par la loi et les institutions, quelles que soient leurs différences", "Une règle obligeant la population à consommer les mêmes biens", "Un système où la loi s'applique différemment selon la richesse"],
     correct: 0,
@@ -148,6 +168,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q21",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Que signifie le mot \"fraternité\" dans la devise française ?",
     a: ["L'obligation de vivre en communauté familiale", "La fraternité exprime le devoir de solidarité entre les membres de la société", "Le droit d'accéder gratuitement aux transports publics"],
     correct: 1,
@@ -155,6 +176,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q22",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Quel est l'un des rôles des associations ?",
     a: ["Remplacer les forces de l'ordre locales", "Permettre aux citoyens de se regrouper pour défendre des intérêts communs, mener des actions solidaires, culturelles, sportives ou politiques", "Modifier les lois de la République de manière autonome"],
     correct: 1,
@@ -162,6 +184,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q23",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "A-t-on le droit d'insulter publiquement quelqu'un parce qu'il est différent (handicap, apparence physique, sexe...) ?",
     a: ["Oui, cela relève de la liberté d'expression", "Non. Les insultes et propos discriminatoires sont interdits par la loi et constituent des infractions pénales", "Oui, mais uniquement dans le cadre privé"],
     correct: 1,
@@ -169,6 +192,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q24",
+    theme: "Les grandes libertés", macro: "Thème 1 — Symboles et principes",
     q: "Certains métiers peuvent-ils être réservés aux hommes ?",
     a: ["Oui, les métiers considérés comme particulièrement pénibles", "Non. Le principe d'égalité homme-femme interdit toute discrimination à l'embauche fondée sur le sexe", "Oui, les postes de haute direction dans la fonction publique"],
     correct: 1,
@@ -178,6 +202,7 @@ const DATABASE_QUESTIONS = [
   // --- La laïcité ---
   {
     id: "T1_Q25",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Qu'est-ce que la laïcité ?",
     a: ["L'interdiction de toute pratique religieuse en France", "La séparation des institutions publiques et des organisations religieuses, la neutralité de l'État et la liberté de conscience", "L'obligation de choisir une religion d'État approuvée par le gouvernement"],
     correct: 1,
@@ -185,6 +210,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q26",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
     a: ["En 1789", "En 1905", "En 1958"],
     correct: 1,
@@ -192,6 +218,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q27",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Que permet le principe de laïcité ?",
     a: ["D'interdire l'accès aux lieux de culte", "La laïcité permet à chaque personne de croire ou de ne pas croire librement", "D'imposer une philosophie d'État obligatoire"],
     correct: 1,
@@ -199,6 +226,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q28",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Quel droit est garanti par la laïcité ?",
     a: ["Le droit à l'exemption de devoirs civiques", "La liberté de conscience : chaque personne a le droit de choisir sa religion, d'en changer ou de n'en avoir aucune", "Le droit de ne pas respecter le code de la route"],
     correct: 1,
@@ -206,6 +234,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q29",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Pourquoi le principe de laïcité doit-il être respecté à l'école ?",
     a: ["Pour harmoniser les uniformes scolaires", "Parce que l'école publique est un lieu de la République, neutre et commun à tous. Elle doit garantir un cadre d'apprentissage libre", "Pour supprimer l'enseignement de l'histoire des religions"],
     correct: 1,
@@ -213,6 +242,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q30",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Un enfant peut-il refuser d'aller à l'école pour une raison religieuse ?",
     a: ["Oui, sur demande écrite des tuteurs légaux", "Non. L'instruction est obligatoire pour tous les enfants de 3 à 16 ans", "Oui, mais uniquement dans l'enseignement secondaire"],
     correct: 1,
@@ -220,6 +250,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q31",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Une personne a-t-elle le droit de ne pas croire en une religion ?",
     a: ["Non, la loi impose une affiliation confessionnelle spirituelle", "Oui. La liberté de conscience garantie par la laïcité inclut le droit à l'athéisme et à l'agnosticisme", "Oui, mais uniquement si elle possède la nationalité française"],
     correct: 1,
@@ -227,6 +258,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T1_Q32",
+    theme: "La laïcité", macro: "Thème 1 — Symboles et principes",
     q: "Une personne peut-elle changer librement de religion ?",
     a: ["Non, c'est interdit une fois l'état civil enregistré", "Oui. La liberté de conscience garantit le droit de changer de religion ou de conviction à tout moment", "Oui, sous réserve d'une validation par un tribunal administratif"],
     correct: 1,
@@ -240,6 +272,7 @@ const DATABASE_QUESTIONS = [
   // --- Les institutions de la République ---
   {
     id: "T2_Q1",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui réside au palais de l'Élysée ?",
     a: ["Le Premier ministre", "Le Président de la République", "Le Président de l'Assemblée nationale"],
     correct: 1,
@@ -247,6 +280,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q2",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui est élu lors des élections présidentielles ?",
     a: ["Le Premier ministre", "Le Président de la République", "Les députés"],
     correct: 1,
@@ -254,6 +288,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q3",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Pour combien de temps est élu le Président de la République ?",
     a: ["4 ans", "5 ans", "7 ans"],
     correct: 1,
@@ -261,6 +296,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q4",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui nomme le Premier ministre ?",
     a: ["Le peuple français", "Le Président de la République", "Le Président du Sénat"],
     correct: 1,
@@ -268,6 +304,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q5",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui possède le pouvoir exécutif ?",
     a: ["Le Parlement uniquement", "Le Président de la République et le gouvernement", "Les juges et magistrats"],
     correct: 1,
@@ -275,6 +312,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q6",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qu'est-ce que le pouvoir exécutif ?",
     a: ["Le pouvoir qui vote les lois et le budget", "Le pouvoir qui met en œuvre les lois et dirige l'action de l'État au quotidien", "Le pouvoir qui juge les infractions et tranche les litiges"],
     correct: 1,
@@ -282,6 +320,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q7",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui possède le pouvoir législatif ?",
     a: ["Le Président de la République", "Le Parlement (Assemblée nationale et Sénat)", "Le Conseil constitutionnel"],
     correct: 1,
@@ -289,6 +328,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q8",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui vote les lois ?",
     a: ["Le Premier ministre seul", "Le Parlement (l'Assemblée nationale et le Sénat)", "Les préfets"],
     correct: 1,
@@ -296,6 +336,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q9",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Le Parlement est composé :",
     a: ["Du Président de la République et des ministres", "De l'Assemblée nationale (577 députés) et du Sénat (348 sénateurs)", "Du Conseil d'État et des tribunaux"],
     correct: 1,
@@ -303,6 +344,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q10",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Quel est le rôle du Parlement ?",
     a: ["Nommer les hauts fonctionnaires et ambassadeurs", "Voter les lois, contrôler le gouvernement et adopter le budget de l'État", "Rendre la justice et appliquer les sanctions pénales"],
     correct: 1,
@@ -310,6 +352,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q11",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui est élu lors des élections législatives ?",
     a: ["Le Président de la République", "Les députés à l'Assemblée nationale", "Les maires"],
     correct: 1,
@@ -317,6 +360,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q12",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Combien de députés composent l'Assemblée nationale ?",
     a: ["348 députés", "577 députés", "600 députés"],
     correct: 1,
@@ -324,6 +368,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q13",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Quel est le rôle des députés ?",
     a: ["Diriger les ministères et administrations publiques", "Représenter les citoyens, voter les lois et contrôler l'action du gouvernement", "Nommer le préfet de leur département"],
     correct: 1,
@@ -331,6 +376,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q14",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Quand sont élus les sénateurs ?",
     a: ["Tous les 5 ans au suffrage direct", "Tous les 3 ans (par moitié) par les grands électeurs", "Tous les 6 ans par le Président"],
     correct: 1,
@@ -338,6 +384,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q15",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Pour combien de temps sont élus les sénateurs ?",
     a: ["4 ans", "6 ans", "9 ans"],
     correct: 1,
@@ -345,6 +392,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q16",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Pour combien de temps sont élus les députés ?",
     a: ["3 ans", "5 ans", "7 ans"],
     correct: 1,
@@ -352,6 +400,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q17",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "La séparation des pouvoirs : quels sont les trois pouvoirs concernés ?",
     a: ["Le pouvoir régional, départemental et communal", "Le pouvoir exécutif, le pouvoir législatif et le pouvoir judiciaire", "Le pouvoir présidentiel, gouvernemental et préfectoral"],
     correct: 1,
@@ -359,6 +408,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q18",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Est-ce que le Président de la République a tous les pouvoirs ?",
     a: ["Oui, c'est le chef absolu de l'État", "Non. Les pouvoirs sont séparés entre l'exécutif, le législatif et le judiciaire", "Oui, mais uniquement en cas de crise majeure"],
     correct: 1,
@@ -366,6 +416,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q19",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Quel est le rôle de l'autorité judiciaire ?",
     a: ["Proposer de nouvelles lois au Parlement", "Appliquer la loi, juger les infractions, trancher les litiges et protéger les droits et libertés", "Gérer l'administration et le budget des mairies"],
     correct: 1,
@@ -373,6 +424,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q20",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Quel pouvoir détient un juge ?",
     a: ["Le pouvoir exécutif", "Le pouvoir judiciaire", "Le pouvoir législatif"],
     correct: 1,
@@ -380,6 +432,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q21",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "L'autorité judiciaire est exercée par :",
     a: ["Les députés et sénateurs", "Les magistrats (juges et procureurs)", "La police et la gendarmerie"],
     correct: 1,
@@ -387,6 +440,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q22",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui sanctionne l'auteur d'un vol ?",
     a: ["Le maire de la commune", "Un juge (tribunal)", "Le commissaire de police"],
     correct: 1,
@@ -394,6 +448,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q23",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "A-t-on le droit de ne pas respecter une loi ?",
     a: ["Oui, si l'on a une justification personnelle majeure", "Non. La loi s'impose à tous, sans exception", "Oui, les étrangers n'y sont pas soumis"],
     correct: 1,
@@ -401,6 +456,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q24",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Que se passe-t-il si un ministre ne respecte pas la loi ?",
     a: ["Il bénéficie d'une immunité totale et définitive", "Il peut être poursuivi et jugé comme tout citoyen", "Il est uniquement démis de ses fonctions sans procès"],
     correct: 1,
@@ -408,6 +464,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q25",
+    theme: "Les institutions de la République", macro: "Thème 2 — Institutions et politique",
     q: "Qui doit respecter la loi ?",
     a: ["Uniquement les citoyens de nationalité française", "Tout le monde : les citoyens, les résidents étrangers, les entreprises et l'État lui-même", "Uniquement les personnes majeures"],
     correct: 1,
@@ -417,6 +474,7 @@ const DATABASE_QUESTIONS = [
   // --- Les élections et la démocratie ---
   {
     id: "T2_Q26",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "À partir de quel âge a-t-on le droit de voter ?",
     a: ["16 ans", "18 ans", "21 ans"],
     correct: 1,
@@ -424,6 +482,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q27",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Qui peut voter aux élections en France ?",
     a: ["Tous les résidents ayant un titre de séjour valide", "Les citoyens français majeurs inscrits sur les listes électorales", "Uniquement les propriétaires d'un bien immobilier"],
     correct: 1,
@@ -431,6 +490,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q28",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Quelle condition est nécessaire pour voter aux élections ?",
     a: ["Avoir travaillé au moins 3 ans en France", "Être de nationalité française, avoir 18 ans et être inscrit sur les listes électorales", "Avoir un casier judiciaire totalement vierge de toute amende"],
     correct: 1,
@@ -438,6 +498,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q29",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Que signifie « suffrage universel » ?",
     a: ["Que le vote est payant pour financer les élections", "Que tout citoyen majeur a le droit de voter, sans distinction", "Que les votes comptent double pour les personnes diplômées"],
     correct: 1,
@@ -445,6 +506,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q30",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Qui est élu lors des élections municipales ?",
     a: ["Le préfet et ses secrétaires", "Le conseil municipal et le maire", "Les députés du département"],
     correct: 1,
@@ -452,6 +514,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q31",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Qui dirige la commune ?",
     a: ["Le député de la circonscription", "Le maire", "Le gouverneur de région"],
     correct: 1,
@@ -459,6 +522,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q32",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Concernant les partis politiques, quelle proposition est correcte ?",
     a: ["Ils doivent être autorisés chaque année par décret présidentiel", "En France, les partis politiques sont libres de se créer et d'exprimer leurs idées dans le cadre de la loi", "Il n'existe qu'un seul parti légal en France"],
     correct: 1,
@@ -466,6 +530,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q33",
+    theme: "Les élections et la démocratie", macro: "Thème 2 — Institutions et politique",
     q: "Quel est le régime politique de la France aujourd'hui ?",
     a: ["Une Monarchie parlementaire", "Une République démocratique", "Un Régime d'assemblée unique"],
     correct: 1,
@@ -475,6 +540,7 @@ const DATABASE_QUESTIONS = [
   // --- Les collectivités territoriales et l'État ---
   {
     id: "T2_Q34",
+    theme: "Les collectivités territoriales et l'État", macro: "Thème 2 — Institutions et politique",
     q: "Combien y a-t-il de départements en France ?",
     a: ["50 départements", "101 départements", "150 départements"],
     correct: 1,
@@ -482,6 +548,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q35",
+    theme: "Les collectivités territoriales et l'État", macro: "Thème 2 — Institutions et politique",
     q: "Qui représente l'État dans un département ?",
     a: ["Le maire de la plus grande ville", "Le préfet", "Le président du conseil départemental"],
     correct: 1,
@@ -489,6 +556,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q36",
+    theme: "Les collectivités territoriales et l'État", macro: "Thème 2 — Institutions et politique",
     q: "Qui est le préfet ?",
     a: ["Un élu local responsable des routes", "Le représentant de l'État dans un département ou une région, nommé par le gouvernement", "Un magistrat chargé de juger les litiges financiers"],
     correct: 1,
@@ -498,6 +566,7 @@ const DATABASE_QUESTIONS = [
   // --- L'Union Européenne ---
   {
     id: "T2_Q37",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
     a: ["15 États membres", "27 États membres", "32 États membres"],
     correct: 1,
@@ -505,6 +574,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q38",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Quel État n'est pas membre de l'Union européenne ?",
     a: ["L'Italie", "Le Royaume-Uni", "L'Espagne"],
     correct: 1,
@@ -512,6 +582,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q39",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Quel pays est un pays fondateur de l'Union européenne ?",
     a: ["L'Espagne", "La France", "La Grèce"],
     correct: 1,
@@ -519,6 +590,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q40",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Quelle est la monnaie utilisée en France ?",
     a: ["Le Franc français", "L'euro (€)", "Le Dollar européen"],
     correct: 1,
@@ -526,6 +598,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q41",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Qui élit les députés européens ?",
     a: ["Les parlements nationaux de chaque pays", "Les citoyens européens au suffrage universel direct", "Le Conseil des ministres européen"],
     correct: 1,
@@ -533,6 +606,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q42",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "À quelle fréquence les élections européennes sont-elles organisées ?",
     a: ["Tous les 3 ans", "Tous les 5 ans", "Tous les 6 ans"],
     correct: 1,
@@ -540,6 +614,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q43",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Quelle condition est nécessaire pour voter aux élections européennes ?",
     a: ["Être né sur le continent européen", "Être citoyen d'un État membre de l'UE, avoir 18 ans et être inscrit sur les listes électorales", "Payer des impôts dans au moins deux pays de l'Union"],
     correct: 1,
@@ -547,6 +622,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T2_Q44",
+    theme: "L'Union Européenne", macro: "Thème 2 — Institutions et politique",
     q: "Quand célèbre-t-on la journée de l'Europe ?",
     a: ["Le 1er mai", "Le 9 mai", "Le 14 juillet"],
     correct: 1,
@@ -560,6 +636,7 @@ const DATABASE_QUESTIONS = [
   // --- La Constitution et les textes fondamentaux ---
   {
     id: "T3_Q1",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Comment s'appelle la Constitution actuelle de la France ?",
     a: ["La Constitution de la IVe République", "La Constitution de la Ve République", "La Charte des droits républicains"],
     correct: 1,
@@ -567,6 +644,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q2",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Comment s'appelle le texte qui énonce les droits et devoirs des personnes résidant en France ?",
     a: ["Le Code de la route", "La Déclaration des Droits de l'Homme et du Citoyen (DDHC)", "Le Traité de Versailles"],
     correct: 1,
@@ -574,6 +652,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q3",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "De quelle année date la Déclaration des droits de l'homme et du citoyen ?",
     a: ["1789", "1905", "1945"],
     correct: 0,
@@ -581,6 +660,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q4",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Quel texte a été adopté pendant la Révolution française ?",
     a: ["Le Code civil", "La Déclaration des Droits de l'Homme et du Citoyen (DDHC)", "La Constitution de la Ve République"],
     correct: 1,
@@ -588,6 +668,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q5",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Parmi ces textes, lequel garantit les droits et libertés en France ?",
     a: ["La charte de la commune", "La Déclaration des Droits de l'Homme et du Citoyen (DDHC) de 1789", "Le décret sur la presse de 1810"],
     correct: 1,
@@ -595,6 +676,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q6",
+    theme: "La Constitution et les textes fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Quel est le texte fondateur établissant en France les droits et devoirs de chaque citoyen ?",
     a: ["La Déclaration des Droits de l'Homme et du Citoyen (DDHC) de 1789, complétée par le Préambule de 1946 et la Charte de l'environnement", "Le règlement intérieur du Parlement", "La Déclaration d'indépendance nationale"],
     correct: 0,
@@ -604,6 +686,7 @@ const DATABASE_QUESTIONS = [
   // --- Les droits fondamentaux ---
   {
     id: "T3_Q7",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Lequel de ces droits est un droit fondamental ?",
     a: ["La liberté d'expression, de conscience, le droit à un procès équitable, à l'éducation et à la santé", "Le droit d'accès gratuit aux cinémas et théâtres d'État", "Le droit de s'affranchir de l'impôt sur le revenu"],
     correct: 0,
@@ -611,6 +694,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q8",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Qu'est-ce que la liberté d'expression ?",
     a: ["Le droit d'insulter publiquement ses voisins en cas de désaccord", "Le droit de chaque personne d'exprimer ses opinions librement, dans les limites fixées par la loi", "Une liberté réservée exclusivement aux membres du gouvernement"],
     correct: 1,
@@ -618,6 +702,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q9",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Quel droit permet à une personne de se défendre devant la justice ?",
     a: ["Le droit à la défense", "Le droit de veto judiciaire", "La liberté d'association"],
     correct: 0,
@@ -625,6 +710,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q10",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Quelle liberté permet à une personne de ne pas avoir de religion ?",
     a: ["La liberté de réunion", "La liberté de conscience (ou liberté de pensée)", "Le droit à l'anonymat public"],
     correct: 1,
@@ -632,6 +718,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q11",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Que permet la citoyenneté française ?",
     a: ["De voyager sans titre de transport sur le territoire national", "De voter aux élections, d'être élu, d'accéder à certains emplois publics et de bénéficier de la protection consulaire", "D'obtenir l'exemption définitive des obligations fiscales civiques"],
     correct: 1,
@@ -639,6 +726,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q12",
+    theme: "Les droits fondamentaux", macro: "Thème 3 — Droits et devoirs",
     q: "Concernant les droits individuels, quelle proposition est correcte ?",
     a: ["Ils s'appliquent de manière arbitraire selon les régions de France", "Ils sont garantis par la Constitution et s'exercent librement tant qu'ils ne nuisent pas à autrui", "Ils remplacent les devoirs fiscaux de l'individu"],
     correct: 1,
@@ -648,6 +736,7 @@ const DATABASE_QUESTIONS = [
   // --- Les droits sur la vie privée et la famille ---
   {
     id: "T3_Q13",
+    theme: "Les droits sur la vie privée et la famille", macro: "Thème 3 — Droits et devoirs",
     q: "Une femme peut-elle avorter en France ?",
     a: ["Non, c'est totalement interdit par la législation nationale", "Oui, le droit à l'IVG est légal et inscrit dans la Constitution française", "Oui, mais cela nécessite un accord écrit d'un tribunal"],
     correct: 1,
@@ -655,6 +744,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q14",
+    theme: "Les droits sur la vie privée et la famille", macro: "Thème 3 — Droits et devoirs",
     q: "Est-il toujours possible de divorcer ?",
     a: ["Non, le divorce est interdit sauf motif religieux spécifique", "Oui, toute personne peut demander le divorce", "Oui, mais seulement après l'accord du maire de la commune"],
     correct: 1,
@@ -662,6 +752,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q15",
+    theme: "Les droits sur la vie privée et la famille", macro: "Thème 3 — Droits et devoirs",
     q: "La peine de mort est :",
     a: ["Suspendue temporairement", "Abolie en France", "Autorisée uniquement pour les crimes d'État"],
     correct: 1,
@@ -669,6 +760,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q16",
+    theme: "Les droits sur la vie privée et la famille", macro: "Thème 3 — Droits et devoirs",
     q: "En France, est-ce légal d'être marié à plusieurs personnes en même temps ?",
     a: ["Oui, c'est autorisé pour l'ensemble des résidents majeurs", "Non, la polygamie est interdite en France", "Oui, si le premier conjoint fournit une décharge écrite"],
     correct: 1,
@@ -678,6 +770,7 @@ const DATABASE_QUESTIONS = [
   // --- Les devoirs et les infractions ---
   {
     id: "T3_Q17",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Que risque une personne qui ne respecte pas la loi ?",
     a: ["Une simple réprimande morale de la part des forces de l'ordre", "Des sanctions pénales (amende, prison) ou civiles selon la gravité de l'infraction", "Rien, la loi n'étant qu'une recommandation indicative"],
     correct: 1,
@@ -685,6 +778,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q18",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Qu'est-ce qu'une infraction ?",
     a: ["Une démarche administrative obligatoire auprès de la préfecture", "Un acte interdit par la loi, classé en contravention, délit ou crime", "Une autorisation d'exercer un métier commercial"],
     correct: 1,
@@ -692,6 +786,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q19",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Quelle est l'infraction la plus grave ?",
     a: ["Le délit", "Le crime", "La contravention"],
     correct: 1,
@@ -699,6 +794,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q20",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Quel est le rôle de la police ?",
     a: ["Rédiger de nouvelles lois pour le Parlement national", "Maintenir l'ordre public, protéger les personnes et les biens, et réprimer les infractions", "Trancher définitivement les litiges civils financiers"],
     correct: 1,
@@ -706,6 +802,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q21",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Quel est le rôle de la gendarmerie ?",
     a: ["Elle est une milice privée sous l'autorité des maires uniquement", "Elle exerce les mêmes missions que la police dans les zones rurales et péri-urbaines", "Elle est uniquement active à l'étranger dans les conflits internationaux"],
     correct: 1,
@@ -713,6 +810,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q22",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Que doit faire une personne en cas d'accident ?",
     a: ["Poursuivre sa route immédiatement pour ne pas gêner", "S'arrêter, porter secours si possible, appeler les secours et ne pas quitter les lieux", "Appeler un média d'information avant les numéros d'urgence"],
     correct: 1,
@@ -720,6 +818,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q23",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Que doit faire une victime de violences ?",
     a: ["Attendre que l'infraction disparaisse d'elle-même", "Appeler la police (17) ou la gendarmerie, se rendre aux urgences si nécessaire, et déposer plainte", "Garder le secret par crainte de complications administratives"],
     correct: 1,
@@ -727,6 +826,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q24",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Faut-il réduire ses déchets ?",
     a: ["Non, l'État gère l'élimination sans limites de volume", "Oui, la réduction des déchets est une obligation environnementale et civique", "Non, le tri est facultatif pour les particuliers"],
     correct: 1,
@@ -734,6 +834,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q25",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Jeter une bouteille dans la rue est :",
     a: ["Toléré par l'administration municipale", "Un acte interdit (contravention) puni d'une amende", "Un acte libre sur la voie publique"],
     correct: 1,
@@ -741,6 +842,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q26",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "Déposer une machine à laver cassée sur le trottoir est :",
     a: ["Autorisé s'il s'agit d'un objet métallique", "Interdit. Les encombrants doivent être déposés en déchetterie ou signalés à la mairie", "Légal à n'importe quelle heure de la journée"],
     correct: 1,
@@ -748,6 +850,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T3_Q27",
+    theme: "Les devoirs et les infractions", macro: "Thème 3 — Droits et devoirs",
     q: "En quoi consiste la traite des êtres humains ?",
     a: ["Un accord d'immigration légal supervisé par l'État", "Le recrutement ou l'accueil de personnes par contrainte à des fins d'exploitation (travail forcé, prostitution)", "Un système de recrutement de la fonction publique"],
     correct: 1,
@@ -760,6 +863,7 @@ const DATABASE_QUESTIONS = [
   // --- Les grandes dates de l'histoire de France ---
   {
     id: "T4_Q1",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "En quelle année a débuté la Révolution française ?",
     a: ["1492", "1789", "1914"],
     correct: 1,
@@ -767,6 +871,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q2",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était le roi de France au moment de la Révolution française ?",
     a: ["Louis XIV", "Louis XVI", "Henri IV"],
     correct: 1,
@@ -774,6 +879,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q3",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Napoléon Ier ?",
     a: ["Un roi de la dynastie des Capétiens", "Un général de la Révolution devenu Consul puis Empereur des Français", "Le premier Président de la République française"],
     correct: 1,
@@ -781,6 +887,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q4",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui a rendu l'école gratuite, laïque et obligatoire ?",
     a: ["Napoléon Bonaparte", "Jules Ferry", "Charles de Gaulle"],
     correct: 1,
@@ -788,6 +895,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q5",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Depuis quelle année l'école publique est-elle gratuite ?",
     a: ["1789", "1881", "1945"],
     correct: 1,
@@ -795,6 +903,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q6",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quand a eu lieu la Première Guerre mondiale ?",
     a: ["De 1870 à 1871", "De 1914 à 1918", "De 1939 à 1945"],
     correct: 1,
@@ -802,6 +911,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q7",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle guerre a eu lieu entre 1914 et 1918 ?",
     a: ["La guerre de Cent Ans", "La Première Guerre mondiale", "La Seconde Guerre mondiale"],
     correct: 1,
@@ -809,6 +919,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q8",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
     a: ["À la fête du travail", "À la commémoration de l'armistice de 1918", "À la célébration de la Constitution"],
     correct: 1,
@@ -816,6 +927,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q9",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quand a eu lieu la Seconde Guerre mondiale ?",
     a: ["De 1914 à 1918", "De 1939 à 1945", "De 1954 à 1962"],
     correct: 1,
@@ -823,6 +935,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q10",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qu'est-ce que la Shoah ?",
     a: ["Une bataille navale de la Première Guerre mondiale", "Le génocide de six millions de Juifs d'Europe organisé par le régime nazi", "Un traité d'alliance signé entre la France et le Royaume-Uni"],
     correct: 1,
@@ -830,6 +943,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q11",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "En quelle année l'esclavage a-t-il été aboli définitivement en France ?",
     a: ["En 1789", "En 1848", "En 1905"],
     correct: 1,
@@ -837,6 +951,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q12",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "En quelle année a été créée la Communauté Économique Européenne (CEE) ?",
     a: ["En 1945", "En 1957", "En 1992"],
     correct: 1,
@@ -844,6 +959,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q13",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui a fondé la Ve République ?",
     a: ["Napoléon Bonaparte", "Le général Charles de Gaulle", "François Mitterrand"],
     correct: 1,
@@ -851,6 +967,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q14",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui a été le premier Président élu sous la Ve République ?",
     a: ["Georges Pompidou", "Charles de Gaulle", "Valéry Giscard d'Estaing"],
     correct: 1,
@@ -858,6 +975,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q15",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Pourquoi l'année 1958 est-elle importante pour la France ?",
     a: ["Parce qu'elle marque la fin de la Seconde Guerre mondiale", "Parce que la Constitution de la Ve République a été adoptée", "Parce que l'école est devenue gratuite cette année-là"],
     correct: 1,
@@ -865,6 +983,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q16",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Combien y a-t-il eu de républiques en France ?",
     a: ["3 républiques", "5 républiques", "7 républiques"],
     correct: 1,
@@ -872,6 +991,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q17",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Dans quelle République est-on aujourd'hui ?",
     a: ["La IIIe République", "La Ve République", "La VIe République"],
     correct: 1,
@@ -879,6 +999,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q18",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Que célèbre-t-on le 14 juillet ?",
     a: ["La signature de la Constitution actuelle", "La prise de la Bastille", "L'armistice de la Première Guerre mondiale"],
     correct: 1,
@@ -886,6 +1007,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q19",
+    theme: "Les grandes dates de l'histoire de France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quel pays ou région du monde a été colonisé par la France ?",
     a: ["L'Europe centrale", "L'Afrique (Maghreb, Afrique subsaharienne), l'Asie du Sud-Est, les Amériques et l'Océanie", "L'Amérique du Nord britannique uniquement"],
     correct: 1,
@@ -895,6 +1017,7 @@ const DATABASE_QUESTIONS = [
   // --- La géographie de la France ---
   {
     id: "T4_Q20",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle est la capitale de la France ?",
     a: ["Lyon", "Paris", "Marseille"],
     correct: 1,
@@ -902,6 +1025,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q21",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qu'est-ce que Paris ?",
     a: ["Une région administrative autonome d'outre-mer", "La capitale de la France, siège du gouvernement et ville la plus peuplée", "Un port maritime majeur du nord de la France"],
     correct: 1,
@@ -909,6 +1033,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q22",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quel fleuve coule en France ?",
     a: ["Le Danube", "La Seine, la Loire, le Rhône, la Garonne et le Rhin", "Le Nil"],
     correct: 1,
@@ -916,6 +1041,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q23",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Sur quel continent se situe la France métropolitaine ?",
     a: ["En Amérique du Nord", "En Europe", "En Afrique"],
     correct: 1,
@@ -923,6 +1049,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q24",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quel océan borde la côte ouest française ?",
     a: ["L'océan Pacifique", "L'océan Atlantique", "L'océan Indien"],
     correct: 1,
@@ -930,6 +1057,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q25",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle est la mer au sud de la France métropolitaine ?",
     a: ["La mer Rouge", "La mer Méditerranée", "La mer Baltique"],
     correct: 1,
@@ -937,6 +1065,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q26",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
     a: ["Les Pyrénées", "Les Alpes", "Le Massif central"],
     correct: 1,
@@ -944,6 +1073,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q27",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Combien y a-t-il de régions en France métropolitaine ?",
     a: ["5 régions", "13 régions métropolitaines", "22 régions"],
     correct: 1,
@@ -951,6 +1081,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q28",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle île ou territoire est un département d'outre-mer français ?",
     a: ["La Corse et la Sardaigne", "La Martinique, la Guadeloupe, La Réunion, Mayotte et la Guyane", "Madagascar et Haïti"],
     correct: 1,
@@ -958,6 +1089,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q29",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Où se situe la Corse ?",
     a: ["Dans l'océan Atlantique", "En mer Méditerranée", "Dans la mer de la Manche"],
     correct: 1,
@@ -965,6 +1097,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q30",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle ville est française ?",
     a: ["Bruxelles et Genève", "Paris, Lyon, Marseille, Bordeaux, Toulouse, Lille", "Montréal et Casablanca"],
     correct: 1,
@@ -972,6 +1105,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q31",
+    theme: "La géographie de la France", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quelle ville est un grand port maritime ?",
     a: ["Paris et Lyon", "Marseille, Le Havre, Bordeaux, Nantes-Saint-Nazaire", "Strasbourg et Toulouse"],
     correct: 1,
@@ -981,6 +1115,7 @@ const DATABASE_QUESTIONS = [
   // --- Le patrimoine culturel ---
   {
     id: "T4_Q32",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Molière ?",
     a: ["Un peintre impressionniste célèbre", "Un dramaturge français, auteur de grandes comédies", "Un homme politique de la Révolution"],
     correct: 1,
@@ -988,6 +1123,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q33",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Jean de la Fontaine ?",
     a: ["Un amiral de la marine royale", "Un poète français célèbre pour ses Fables", "Un architecte ayant construit les châteaux de la Loire"],
     correct: 1,
@@ -995,6 +1131,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q34",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Charles Baudelaire ?",
     a: ["Un compositeur de musique d'opéra", "Un poète français, auteur des Fleurs du Mal", "Un cinéaste de la Nouvelle Vague"],
     correct: 1,
@@ -1002,6 +1139,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q35",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était George Sand ?",
     a: ["Un homme d'État britannique ami de la France", "Une romancière française engagée, l'une des premières grandes femmes de lettres", "Une exploratrice du continent africain"],
     correct: 1,
@@ -1009,6 +1147,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q36",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Simone de Beauvoir ?",
     a: ["Une reine de France au Moyen Âge", "Une philosophe et écrivaine française, auteure du Deuxième Sexe", "Une scientifique ayant découvert le radium"],
     correct: 1,
@@ -1016,6 +1155,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q37",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Albert Camus ?",
     a: ["Un sculpteur français de l'époque moderne", "Un écrivain et philosophe français, auteur de L'Étranger et La Peste", "Un aviateur héroïque de la Première Guerre mondiale"],
     correct: 1,
@@ -1023,6 +1163,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q38",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Paul Cézanne ?",
     a: ["Un ministre des finances sous Louis XIV", "Un peintre français, précurseur du cubisme", "Un architecte des monuments parisiens"],
     correct: 1,
@@ -1030,6 +1171,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q39",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Marc Chagall ?",
     a: ["Un musicien classique virtuose", "Un peintre d'origine biélorusse naturalisé français, connu pour ses œuvres poétiques", "Un poète du mouvement romantique"],
     correct: 1,
@@ -1037,6 +1179,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q40",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était Joséphine Baker ?",
     a: ["Une femme politique française ministre de la santé", "Une artiste américaine naturalisée française, danseuse, chanteuse et résistante", "La première avocate inscrite au barreau de Paris"],
     correct: 1,
@@ -1044,6 +1187,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q41",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qui était une chanteuse française célèbre ?",
     a: ["Marie Curie", "Édith Piaf", "George Sand"],
     correct: 1,
@@ -1051,6 +1195,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q42",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Qu'est-ce que le Louvre ?",
     a: ["Le palais où siège le Sénat français actuellement", "Le plus grand musée du monde et le plus visité, situé à Paris", "Une cathédrale gothique du nord de la France"],
     correct: 1,
@@ -1058,6 +1203,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q43",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Dans quelle ville se trouve la tour Eiffel ?",
     a: ["Marseille", "Paris", "Lyon"],
     correct: 1,
@@ -1065,6 +1211,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q44",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Quand célèbre-t-on Noël ?",
     a: ["Le 14 juillet", "Le 25 décembre", "Le 1er janvier"],
     correct: 1,
@@ -1072,6 +1219,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T4_Q45",
+    theme: "Le patrimoine culturel", macro: "Thème 4 — Histoire, géographie, culture",
     q: "Lequel de ces personnages historiques est français ?",
     a: ["Abraham Lincoln", "Napoléon Bonaparte", "Christopher Columbus"],
     correct: 1,
@@ -1085,6 +1233,7 @@ const DATABASE_QUESTIONS = [
   // --- La santé ---
   {
     id: "T5_Q1",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "En cas de problème de santé non urgent, à qui faut-il s'adresser en premier ?",
     a: ["Directement aux urgences hospitalières", "Au médecin traitant (médecin généraliste)", "À un médecin spécialiste sans ordonnance"],
     correct: 1,
@@ -1092,6 +1241,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q2",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Quel est le rôle du médecin traitant ?",
     a: ["Assurer uniquement les opérations chirurgicales complexes", "Assurer le suivi médical régulier, orienter vers des spécialistes et coordonner les soins", "Gérer l'administration des hôpitaux publics"],
     correct: 1,
@@ -1099,6 +1249,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q3",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Dans quelles situations doit-on se rendre aux urgences de l'hôpital ?",
     a: ["Pour un renouvellement d'ordonnance ou un rhume léger", "En cas d'urgence médicale grave (accident, perte de connaissance, AVC...)", "Pour obtenir un certificat médical de sport de routine"],
     correct: 1,
@@ -1106,6 +1257,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q4",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
     a: ["La préfecture de votre département", "L'Assurance maladie (Sécurité sociale ou CPAM)", "Le ministère du Travail"],
     correct: 1,
@@ -1113,6 +1265,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q5",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "À quoi sert la carte Vitale ?",
     a: ["À voyager gratuitement dans les transports en commun", "Elle permet d'être reconnu par l'Assurance maladie et facilite le remboursement automatique des soins", "À prouver son identité lors des élections de manière officielle"],
     correct: 1,
@@ -1120,6 +1273,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q6",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "À quoi sert une mutuelle santé ?",
     a: ["À remplacer intégralement la Sécurité sociale", "Elle rembourse tout ou partie des frais de santé non couverts par l'Assurance maladie", "À payer les médicaments non autorisés en France"],
     correct: 1,
@@ -1127,6 +1281,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q7",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Quel est l'objectif des vaccinations obligatoires ?",
     a: ["Financer les laboratoires pharmaceutiques publics", "Protéger chaque individu contre des maladies graves ET protéger la collectivité", "Permettre aux enfants de sauter des classes"],
     correct: 1,
@@ -1134,6 +1289,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q8",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Quel numéro d'urgence permet d'appeler le SAMU ?",
     a: ["Le 17", "Le 15", "Le 18"],
     correct: 1,
@@ -1141,6 +1297,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q9",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Quel numéro d'urgence permet d'appeler les pompiers ?",
     a: ["Le 15", "Le 18", "Le 17"],
     correct: 1,
@@ -1148,6 +1305,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q10",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Qu'est-ce qu'un numéro d'urgence ?",
     a: ["Un numéro surtaxé réservé aux administrations", "Un numéro de téléphone gratuit accessible 24h/24 pour contacter rapidement les secours", "Une ligne directe avec le maire de la commune"],
     correct: 1,
@@ -1155,6 +1313,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q11",
+    theme: "La santé", macro: "Thème 5 — Vivre en société",
     q: "Concernant l'accès aux soins, quelle proposition est correcte ?",
     a: ["L'accès aux soins est réservé exclusivement aux citoyens français", "Toute personne résidant en France, quelle que soit sa situation, a accès aux soins d'urgence", "Les hôpitaux refusent les personnes en situation précaire"],
     correct: 1,
@@ -1164,6 +1323,7 @@ const DATABASE_QUESTIONS = [
   // --- Le travail et l'emploi ---
   {
     id: "T5_Q12",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Quelle est la durée légale du temps de travail par semaine ?",
     a: ["39 heures", "35 heures", "40 heures"],
     correct: 1,
@@ -1171,6 +1331,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q13",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Qu'est-ce que le SMIC ?",
     a: ["Le système médical d'intervention chirurgicale", "Le Salaire Minimum Interprofessionnel de Croissance (salaire minimum légal)", "Un syndicat de travailleurs indépendants"],
     correct: 1,
@@ -1178,6 +1339,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q14",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Que doit faire un employeur pour fixer un salaire ?",
     a: ["Fixer librement le montant sans aucune contrainte légale", "Respecter le SMIC et les éventuelles conventions collectives applicables", "Proposer un salaire inférieur au minimum si l'employé est d'accord"],
     correct: 1,
@@ -1185,6 +1347,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q15",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Le travail non déclaré est :",
     a: ["Autorisé pour les emplois de courte durée", "Illégal et privé de droits sociaux (retraite, chômage, maladie)", "Légal si l'employé paie une taxe forfaitaire"],
     correct: 1,
@@ -1192,6 +1355,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q16",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Quelle est la première démarche à réaliser pour chercher un emploi ?",
     a: ["Demander une autorisation écrite au maire", "S'inscrire à France Travail (anciennement Pôle emploi)", "Attendre d'être contacté par une entreprise publique"],
     correct: 1,
@@ -1199,6 +1363,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q17",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Qui est aidé par France Travail ?",
     a: ["Uniquement les grandes entreprises commerciales étrangères", "Les personnes à la recherche d'un emploi, les demandeurs d'emploi indemnisés et les employeurs", "Uniquement les fonctionnaires de l'État"],
     correct: 1,
@@ -1206,6 +1371,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q18",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Une personne étrangère en situation régulière peut-elle créer son entreprise ?",
     a: ["Non, la création d'entreprise est réservée aux nationaux", "Oui, dans les mêmes conditions qu'un citoyen français", "Oui, mais uniquement sous forme d'association à but non lucratif"],
     correct: 1,
@@ -1213,6 +1379,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q19",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Une femme peut-elle créer son entreprise ?",
     a: ["Non, il faut obligatoirement l'accord d'un conjoint", "Oui, les femmes ont les mêmes droits que les hommes pour créer et diriger une entreprise", "Oui, mais uniquement dans certains secteurs réglementés"],
     correct: 1,
@@ -1220,6 +1387,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q20",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "À partir de quel âge un mineur peut-il travailler ?",
     a: ["14 ans", "16 ans", "18 ans"],
     correct: 1,
@@ -1227,6 +1395,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q21",
+    theme: "Le travail et l'emploi", macro: "Thème 5 — Vivre en société",
     q: "Après avoir obtenu le permis de conduire, que faut-il faire pour conduire sa voiture ?",
     a: ["Conduire directement sans autre formalité", "Assurer son véhicule (responsabilité civile obligatoire) et vérifier le contrôle technique et l'immatriculation", "Attendre une homologation de la préfecture régionale"],
     correct: 1,
@@ -1236,6 +1405,7 @@ const DATABASE_QUESTIONS = [
   // --- L'école et la famille ---
   {
     id: "T5_Q22",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Jusqu'à quel âge l'école est-elle obligatoire ?",
     a: ["14 ans", "16 ans", "18 ans"],
     correct: 1,
@@ -1243,6 +1413,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q23",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Pour qui l'école est-elle obligatoire ?",
     a: ["Uniquement pour les enfants de nationalité française", "Pour tous les enfants résidant en France de 3 à 16 ans, quelle que soit leur nationalité", "Uniquement pour les enfants dont les parents travaillent"],
     correct: 1,
@@ -1250,6 +1421,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q24",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "L'autorité parentale prévoit l'obligation :",
     a: ["De choisir la future carrière professionnelle de l'enfant de manière stricte", "Pour les parents d'assurer l'instruction de leurs enfants, de veiller à leur santé, sécurité et éducation", "D'héberger les enfants jusqu'à l'âge de 30 ans"],
     correct: 1,
@@ -1257,6 +1429,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q25",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Dans quels établissements scolaires vont les élèves après l'école élémentaire ?",
     a: ["Directement à l'université publique", "Au collège puis au lycée", "Dans des centres de formation uniquement manuels"],
     correct: 1,
@@ -1264,6 +1437,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q26",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Quel diplôme obtient-on à la fin du lycée ?",
     a: ["Le Brevet des collèges", "Le baccalauréat (le « bac »)", "La Licence universitaire"],
     correct: 1,
@@ -1271,6 +1445,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q27",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Les enfants qui ne parlent pas français :",
     a: ["Sont refusés à l'école tant qu'ils ne maîtrisent pas la langue", "Sont accueillis dans les écoles publiques avec des dispositifs spéciaux (UPE2A) pour apprendre", "Doivent obligatoirement s'inscrire dans des écoles privées payantes"],
     correct: 1,
@@ -1278,6 +1453,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q28",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Un enfant inscrit à l'école :",
     a: ["Peut s'absenter librement selon le choix des parents", "Doit y être présent régulièrement, les absences répétées non justifiées étant sanctionnées", "N'est obligé de venir que les jours d'examens régionaux"],
     correct: 1,
@@ -1285,6 +1461,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q29",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "À quelles conditions un mariage est-il reconnu juridiquement ?",
     a: ["Il suffit d'organiser une cérémonie religieuse traditionnelle", "Il doit être célébré devant un officier d'état civil (mairie) entre deux personnes majeures libres et consentantes", "Il doit obtenir la validation par un décret préfectoral"],
     correct: 1,
@@ -1292,6 +1469,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T5_Q30",
+    theme: "L'école et la famille", macro: "Thème 5 — Vivre en société",
     q: "Quand faut-il déclarer son enfant au service d'état civil de la mairie ?",
     a: ["Dans le mois suivant la naissance", "Dans les 5 jours suivant la naissance", "Uniquement au moment de sa première rentrée scolaire"],
     correct: 1,
@@ -1305,6 +1483,7 @@ const DATABASE_QUESTIONS = [
   // --- L'État de droit et la démocratie approfondie ---
   {
     id: "T_CR1",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Qu'est-ce que l'État de droit ?",
     a: ["Un système où seul le gouvernement choisit les règles sans contrôle", "Le principe selon lequel toutes les personnes et institutions, y compris l'État, sont soumises à la loi", "Un régime où la loi ne s'applique qu'aux citoyens de nationalité française"],
     correct: 1,
@@ -1312,6 +1491,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR2",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Que garantit l'État de droit ?",
     a: ["La gratuité totale de tous les services marchands du pays", "L'égalité de tous devant la loi, l'indépendance de la justice et le contrôle des actes du gouvernement", "L'accès aux postes ministériels sans condition d'âge"],
     correct: 1,
@@ -1319,6 +1499,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR3",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "La loi est l'expression de :",
     a: ["La volonté exclusive du Président de la République", "La volonté générale", "Uniquement des souhaits des hauts fonctionnaires"],
     correct: 1,
@@ -1326,6 +1507,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR4",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Pourquoi séparer les trois pouvoirs dans une démocratie ?",
     a: ["Pour ralentir l'adoption des textes administratifs", "Pour éviter qu'une seule personne ou institution concentre tous les pouvoirs, ce qui conduirait à la tyrannie", "Pour réduire les coûts budgétaires des ministères"],
     correct: 1,
@@ -1333,6 +1515,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR5",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Est-ce que le vote est obligatoire en France ?",
     a: ["Oui, sous peine d'une amende forfaitaire", "Non, le vote n'est pas obligatoire en France", "Oui, mais uniquement pour les élections présidentielles"],
     correct: 1,
@@ -1340,6 +1523,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR6",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Une personne peut-elle voter à la place d'une autre ?",
     a: ["Oui, si elle possède une simple lettre signée à la main", "Non, le vote est personnel et secret", "Oui, l'accès à l'urne est libre pour les membres d'une même famille"],
     correct: 1,
@@ -1347,6 +1531,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR7",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Qu'est-ce que l'Hôtel de Matignon ?",
     a: ["Le siège du ministère des Affaires étrangères", "La résidence officielle et le lieu de travail du Premier ministre", "Le palais où se réunit le Conseil constitutionnel"],
     correct: 1,
@@ -1354,6 +1539,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR8",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel est le rôle du Président de la République ?",
     a: ["Voter les lois à la place du Parlement", "Garantir le respect de la Constitution, assurer la continuité de l'État et être chef des armées", "Trancher directement les conflits judiciaires privés"],
     correct: 1,
@@ -1361,6 +1547,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR9",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel est le rôle du Premier ministre ?",
     a: ["Remplacer les juges de la Cour de cassation", "Diriger l'action du gouvernement, coordonner les ministres et appliquer les lois", "Présider obligatoirement toutes les séances du Sénat"],
     correct: 1,
@@ -1368,6 +1555,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR10",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel est le rôle du gouvernement ?",
     a: ["Élire le Président de la République", "Définir et conduire la politique de la Nation, préparer les lois et gérer les services publics", "Sanctionner pénalement les infractions routières"],
     correct: 1,
@@ -1375,6 +1563,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR11",
+    theme: "L'État de droit et la démocratie approfondie", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel est le rôle du Défenseur des droits ?",
     a: ["Défendre l'État français devant les instances internationales", "Défendre les personnes dont les droits ne sont pas respectés et lutter contre les discriminations", "Rédiger les contrats de travail de la fonction publique"],
     correct: 1,
@@ -1384,6 +1573,7 @@ const DATABASE_QUESTIONS = [
   // --- L'UE approfondie — niveau CR ---
   {
     id: "T_CR12",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel traité concerne la construction de l'Union européenne ?",
     a: ["Le traité de Versailles", "Le traité de Maastricht", "Le traité de Paris de 1815"],
     correct: 1,
@@ -1391,6 +1581,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR13",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "En quelle année le traité de Maastricht a-t-il été signé ?",
     a: ["1789", "1992", "2005"],
     correct: 1,
@@ -1398,6 +1589,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR14",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel État a quitté l'Union européenne en 2020 ?",
     a: ["La France", "Le Royaume-Uni", "La Suisse"],
     correct: 1,
@@ -1405,6 +1597,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR15",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Quelle est la devise de l'Union européenne ?",
     a: ["Liberté, Égalité, Fraternité", "Unie dans la diversité", "Paix, Progrès et Solidarité"],
     correct: 1,
@@ -1412,6 +1605,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR16",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Quel est l'hymne de l'Union européenne ?",
     a: ["La Marseillaise", "L'Ode à la joie (9e Symphonie de Beethoven)", "Le Chant des partisans"],
     correct: 1,
@@ -1419,6 +1613,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR17",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "De quelle couleur est le drapeau européen ?",
     a: ["Fond blanc avec un cercle d'étoiles bleues", "Fond bleu avec un cercle de 12 étoiles jaunes/dorées", "Un drapeau tricolore vertical vert, blanc, rouge"],
     correct: 1,
@@ -1426,6 +1621,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR18",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Où est le siège du Parlement européen ?",
     a: ["À Paris", "À Strasbourg", "À Berlin"],
     correct: 1,
@@ -1433,6 +1629,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR19",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Où est le siège de la Commission européenne ?",
     a: ["À Rome", "À Bruxelles", "À Strasbourg"],
     correct: 1,
@@ -1440,6 +1637,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR20",
+    theme: "L'UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Depuis quand l'euro est-il la monnaie unique sous forme de pièces et billets ?",
     a: ["Depuis le 1er janvier 1990", "Depuis le 1er janvier 2002", "Depuis le 1er janvier 2010"],
     correct: 1,
@@ -1449,6 +1647,7 @@ const DATABASE_QUESTIONS = [
   // --- Droits spécifiques — niveau CR ---
   {
     id: "T_CR21",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Que garantit la liberté de la presse ?",
     a: ["Le droit pour l'État de relire et modifier les articles avant publication", "Le droit des journalistes et des médias d'informer, d'enquêter et de publier librement", "L'obligation pour chaque citoyen d'acheter un journal"],
     correct: 1,
@@ -1456,6 +1655,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR22",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Que prévoit la Charte de l'environnement ?",
     a: ["L'interdiction totale de l'usage des voitures en zone urbaine", "Elle reconnaît le droit à un environnement sain et fait de sa protection un devoir", "L'obligation de posséder un jardin privatif"],
     correct: 1,
@@ -1463,6 +1663,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR23",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Que signifie la dignité humaine ?",
     a: ["Une distinction honorifique accordée par la présidence", "Le droit de chaque être humain à être respecté et traité avec considération", "Une obligation de détenir des titres académiquesélevés"],
     correct: 1,
@@ -1470,6 +1671,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR24",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Qu'est-ce que le droit de grève ?",
     a: ["Le droit de ne jamais payer ses cotisations d'assurance", "Le droit pour les travailleurs de cesser collectivement le travail pour défendre leurs intérêts", "Une autorisation d'absence non justifiée accordée par la mairie"],
     correct: 1,
@@ -1477,6 +1679,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR25",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Parmi les actions citoyennes, laquelle constitue une participation citoyenne ?",
     a: ["Regarder la télévision publique nationale", "Voter, participer à une manifestation légale, s'engager dans une association", "Effectuer ses démarches d'achats commerciaux courants"],
     correct: 1,
@@ -1484,6 +1687,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR26",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "La répudiation de sa femme est :",
     a: ["Autorisée si le mariage a été contracté à l'étranger", "Interdite en France car contraire au principe du consentement mutuel", "Légale après accord du conseil municipal"],
     correct: 1,
@@ -1491,6 +1695,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR27",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "À l'école publique, qui peut porter des signes religieux très visibles ?",
     a: ["Les enseignants uniquement", "Personne (ni les élèves, ni les enseignants, ni les agents)", "Les élèves uniquement"],
     correct: 1,
@@ -1498,6 +1703,7 @@ const DATABASE_QUESTIONS = [
   },
   {
     id: "T_CR28",
+    theme: "Droits spécifiques — niveau CR", macro: "Thème 6 — Niveau carte de résident",
     q: "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
     a: ["Que l'État finance en priorité la religion la plus pratiquée", "Que l'État ne favorise ni ne s'oppose à aucune religion et que ses agents ne doivent exprimer aucune conviction", "Que les cultes sont gérés directement par les préfectures"],
     correct: 1,
@@ -1512,22 +1718,80 @@ const DATABASE_QUESTIONS = [
 let examQuestions = []; 
 let current = 0;
 let score = 0;
-let time = 900; // 15 minutes chrono
+let time = 900; // chrono global
 let timer;
 let currentMode = ""; 
 
 let sessionErrors = []; 
 
+// --- Niveau de difficulté ---
+// "standard" = 3 réponses, pas de chrono par question (comportement d'origine)
+// "difficile" = 4 réponses (avec un piège supplémentaire), chrono par question, temps global réduit
+let difficulte = "standard";
+const REGLAGES_DIFFICULTE = {
+  standard:  { nbOptions: 3, tempsGlobal: 900, tempsParQuestion: 0  },
+  difficile: { nbOptions: 4, tempsGlobal: 600, tempsParQuestion: 20 }
+};
+
+let qTimer = null;
+let qTimeLeft = 0;
+
 window.onload = function() {
   calculerEtAfficherStats();
+  setDifficulte("standard");
 };
+
+function setDifficulte(niveau) {
+  difficulte = niveau;
+  let btnStd = document.getElementById("diff-standard-btn");
+  let btnDif = document.getElementById("diff-difficile-btn");
+  if (btnStd && btnDif) {
+    btnStd.classList.toggle("active", niveau === "standard");
+    btnDif.classList.toggle("active", niveau === "difficile");
+  }
+}
+
+// Pioche un distracteur supplémentaire plausible pris parmi les réponses
+// (bonnes ou mauvaises) d'autres questions du même thème, pour éviter
+// qu'on repère la bonne réponse simplement parce que les autres options
+// "n'ont rien à voir".
+function pickDistractor(q) {
+  let dejaPresentes = q.a.map(t => t.trim().toLowerCase());
+
+  let construireBassin = (filtre) => {
+    let bassin = [];
+    DATABASE_QUESTIONS.forEach(autre => {
+      if (autre.id === q.id) return;
+      if (!filtre(autre)) return;
+      autre.a.forEach(texte => {
+        let clean = texte.trim();
+        if (!dejaPresentes.includes(clean.toLowerCase()) && clean.length >= 3) {
+          bassin.push(clean);
+        }
+      });
+    });
+    return bassin;
+  };
+
+  // 1) priorité : autres questions du même sous-thème
+  let bassin = construireBassin(autre => autre.theme === q.theme);
+  // 2) repli : même grand thème
+  if (bassin.length === 0) bassin = construireBassin(autre => autre.macro === q.macro);
+  // 3) dernier repli : toute la base
+  if (bassin.length === 0) bassin = construireBassin(() => true);
+
+  if (bassin.length === 0) return null;
+  return bassin[Math.floor(Math.random() * bassin.length)];
+}
 
 function startExam(mode) {
   currentMode = mode;
   current = 0;
   score = 0;
   sessionErrors = [];
-  time = 900; 
+
+  let reglages = REGLAGES_DIFFICULTE[difficulte];
+  time = reglages.tempsGlobal;
 
   let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
   let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
@@ -1558,6 +1822,12 @@ function startExam(mode) {
   document.getElementById("score-faux").innerText = 0;
   document.getElementById("score-repondu").innerText = 0;
   document.getElementById("current-total-q").innerText = examQuestions.length;
+  document.getElementById("timer").innerText = time;
+
+  let badge = document.getElementById("diff-badge");
+  if (badge) {
+    badge.style.display = difficulte === "difficile" ? "inline-block" : "none";
+  }
   
   document.getElementById("home-screen").style.display = "none";
   document.getElementById("result-screen").style.display = "none";
@@ -1569,6 +1839,7 @@ function startExam(mode) {
     document.getElementById("timer").innerText = time;
     if (time <= 0) {
       clearInterval(timer);
+      clearInterval(qTimer);
       finDeLExamen();
     }
   }, 1000);
@@ -1578,7 +1849,13 @@ function startExam(mode) {
 
 function showQuestion() {
   let q = examQuestions[current];
+  let reglages = REGLAGES_DIFFICULTE[difficulte];
+
   document.getElementById("progress").innerText = `Question ${current + 1} / ${examQuestions.length}`;
+
+  let themeTag = document.getElementById("theme-tag");
+  if (themeTag) themeTag.innerText = q.theme || q.macro || "";
+
   document.getElementById("question").innerText = q.q;
   document.getElementById("feedback").style.display = "none";
   document.getElementById("next-btn").style.display = "none";
@@ -1590,64 +1867,122 @@ function showQuestion() {
   let reponsesMelangees = q.a.map((reponse, index) => {
     return { texte: reponse, estBonne: index === q.correct };
   });
+
+  // 🔥 Mode difficile : on ajoute un piège supplémentaire, pris parmi les
+  // réponses d'autres questions du même thème, pour forcer une vraie
+  // discrimination plutôt qu'une élimination par élimination du "hors sujet"
+  if (reglages.nbOptions > q.a.length) {
+    let piege = pickDistractor(q);
+    if (piege) {
+      reponsesMelangees.push({ texte: piege, estBonne: false });
+    }
+  }
   
   // Secouer l'ordre des réponses au hasard
   reponsesMelangees.sort(() => Math.random() - 0.5);
+
+  let dejaRepondu = false;
+
+  // Fonction commune : traite une réponse (clic réel OU temps écoulé)
+  function traiterReponse(item, btnCliqué) {
+    if (dejaRepondu) return;
+    dejaRepondu = true;
+    arreterChronoQuestion();
+
+    let allButtons = answersDiv.querySelectorAll("button");
+    allButtons.forEach(b => b.disabled = true);
+
+    if (item && item.estBonne) {
+      score++;
+      btnCliqué.classList.add("correct-ans");
+    } else {
+      if (btnCliqué) btnCliqué.classList.add("wrong-ans");
+      // Colorer la bonne réponse, où qu'elle se trouve
+      reponsesMelangees.forEach((recherche, indexRecherche) => {
+        if (recherche.estBonne) {
+          allButtons[indexRecherche].classList.add("correct-ans");
+        }
+      });
+      sessionErrors.push(q.id);
+    }
+
+    // Sauvegarde en direct (Mode Suivi Continu)
+    if (currentMode === 'suivi') {
+      let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
+      if (!vus.includes(q.id)) {
+        vus.push(q.id);
+        localStorage.setItem('civique_vus', JSON.stringify(vus));
+      }
+    }
+
+    // Mise à jour des compteurs visuels
+    document.getElementById("score-bon").innerText = score;
+    document.getElementById("score-faux").innerText = sessionErrors.length;
+    document.getElementById("score-repondu").innerText = current + 1;
+
+    // Affichage du feedback
+    let fb = document.getElementById("feedback");
+    if (item && item.estBonne) {
+      fb.innerHTML = `<div class="fb-title">✅ Bonne réponse</div><p>${q.explanation}</p>`;
+      fb.className = "feedback-box fb-success";
+    } else if (!item) {
+      fb.innerHTML = `<div class="fb-title">⏱️ Temps écoulé — considéré comme faux</div><p>${q.explanation}</p>`;
+      fb.className = "feedback-box fb-error";
+    } else {
+      fb.innerHTML = `<div class="fb-title">❌ Mauvaise réponse</div><p>${q.explanation}</p>`;
+      fb.className = "feedback-box fb-error";
+    }
+    fb.style.display = "block";
+    document.getElementById("next-btn").style.display = "block";
+  }
 
   // Générer les boutons avec l'ordre aléatoire
   reponsesMelangees.forEach((item) => {
     let btn = document.createElement("button");
     btn.innerText = item.texte;
-    btn.classList.add("answer-btn"); // Nouvelle classe CSS pour le style épuré
-
-    btn.onclick = () => {
-      let allButtons = answersDiv.querySelectorAll("button");
-      allButtons.forEach(b => b.disabled = true);
-
-      // Vérifier si le bouton cliqué est le bon
-      if (item.estBonne) {
-        score++;
-        btn.classList.add("correct-ans");
-      } else {
-        btn.classList.add("wrong-ans");
-        // Trouver et colorer le bon bouton qui s'était caché ailleurs
-        reponsesMelangees.forEach((recherche, indexRecherche) => {
-          if (recherche.estBonne) {
-            allButtons[indexRecherche].classList.add("correct-ans");
-          }
-        });
-        sessionErrors.push(q.id); 
-      }
-
-      // Sauvegarde en direct (Mode Suivi Continu)
-      if (currentMode === 'suivi') {
-        let vus = JSON.parse(localStorage.getItem('civique_vus')) || [];
-        if (!vus.includes(q.id)) {
-          vus.push(q.id);
-          localStorage.setItem('civique_vus', JSON.stringify(vus));
-        }
-      }
-
-      // Mise à jour des compteurs visuels
-      document.getElementById("score-bon").innerText = score;
-      document.getElementById("score-faux").innerText = sessionErrors.length;
-      document.getElementById("score-repondu").innerText = current + 1;
-
-      // Affichage du feedback à la façon de l'image 345b97.png
-      let fb = document.getElementById("feedback");
-      if (item.estBonne) {
-        fb.innerHTML = `<div class="fb-title">✅ Bonne réponse !</div><p>💡 ${q.explanation}</p>`;
-        fb.className = "feedback-box fb-success";
-      } else {
-        fb.innerHTML = `<div class="fb-title">❌ Mauvaise réponse...</div><p>💡 ${q.explanation}</p>`;
-        fb.className = "feedback-box fb-error";
-      }
-      fb.style.display = "block";
-      document.getElementById("next-btn").style.display = "block";
-    };
-
+    btn.classList.add("answer-btn");
+    btn.onclick = () => traiterReponse(item, btn);
     answersDiv.appendChild(btn);
   });
+
+  // Chrono par question (mode difficile uniquement)
+  demarrerChronoQuestion(reglages.tempsParQuestion, () => traiterReponse(null, null));
+}
+
+function demarrerChronoQuestion(secondes, onTimeout) {
+  clearInterval(qTimer);
+  let wrap = document.getElementById("qtimer-wrap");
+  let bar = document.getElementById("qtimer-bar");
+
+  if (!secondes || secondes <= 0) {
+    if (wrap) wrap.style.display = "none";
+    return;
+  }
+
+  qTimeLeft = secondes;
+  if (wrap) wrap.style.display = "block";
+  if (bar) {
+    bar.style.transition = "none";
+    bar.style.width = "100%";
+    bar.classList.remove("qtimer-low");
+    // forcer le reflow pour que la transition suivante reparte bien de 100%
+    void bar.offsetWidth;
+    bar.style.transition = `width ${secondes}s linear`;
+    bar.style.width = "0%";
+  }
+
+  qTimer = setInterval(() => {
+    qTimeLeft--;
+    if (bar && qTimeLeft <= 5) bar.classList.add("qtimer-low");
+    if (qTimeLeft <= 0) {
+      clearInterval(qTimer);
+      onTimeout();
+    }
+  }, 1000);
+}
+
+function arreterChronoQuestion() {
+  clearInterval(qTimer);
 }
 
 function nextQuestion() {
@@ -1663,6 +1998,7 @@ function nextQuestion() {
 function quitterEnCoursExamen() {
   if (confirm("Voulez-vous vraiment quitter l'examen ? Vos réponses actuelles seront sauvegardées (sauf si vous êtes en mode aléatoire).")) {
     clearInterval(timer);
+    clearInterval(qTimer);
     
     if (currentMode === 'suivi' || currentMode === 'erreurs') {
       let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
