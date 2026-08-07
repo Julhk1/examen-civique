@@ -1709,7 +1709,878 @@ const DATABASE_QUESTIONS = [
     correct: 1,
     explanation: "Que l'État ne favorise ni ne s'oppose à aucune religion. Les agents publics et les institutions ne doivent exprimer aucune conviction religieuse dans l'exercice de leurs fonctions."
   },
-  
+
+  // ==========================================
+  // --- QUESTIONS OFFICIELLES SUPPLÉMENTAIRES — NIVEAU CARTE DE RÉSIDENT (CR) ---
+  // Basées sur la liste officielle du ministère de l'Intérieur
+  // ==========================================
+
+  // --- Principes et valeurs de la République (approfondi) ---
+  {
+    id: "T_CR29",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À quoi sert un titre de séjour ?",
+    a: ["Il remplace la carte Vitale pour l'accès aux soins", "Il autorise et atteste la régularité du séjour d'un étranger en France, selon la durée et les droits qu'il précise", "Il donne automatiquement le droit de vote aux élections locales", "Il équivaut juridiquement à la nationalité française"],
+    correct: 1,
+    explanation: "Le titre de séjour autorise et atteste la régularité du séjour d'une personne étrangère en France. Sa nature (carte de séjour temporaire, pluriannuelle, carte de résident) détermine sa durée de validité et les droits associés (travail, regroupement familial...)."
+  },
+  {
+    id: "T_CR30",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "La liberté de circulation permet à toute personne de :",
+    a: ["Franchir n'importe quelle frontière sans aucun document, y compris hors de l'espace Schengen", "Se déplacer et s'installer librement sur le territoire, dans le respect des lois et, pour les étrangers, des règles relatives au séjour", "Occuper tout logement vacant sans autorisation du propriétaire", "Circuler à toute heure sans respecter le code de la route"],
+    correct: 1,
+    explanation: "La liberté de circulation permet à toute personne de se déplacer et de s'installer librement sur le territoire, dans le respect des lois. Pour les étrangers, l'entrée et le séjour restent encadrés par les règles relatives aux titres de séjour."
+  },
+  {
+    id: "T_CR31",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qu'est-ce que la liberté d'association ?",
+    a: ["L'obligation pour chaque citoyen d'adhérer à un syndicat", "Le droit de créer librement une association ou d'y adhérer, sans autorisation préalable de l'État", "Un droit réservé aux associations reconnues d'utilité publique", "L'obligation de faire valider les statuts d'une association par le Parlement"],
+    correct: 1,
+    explanation: "La liberté d'association, garantie depuis la loi de 1901, permet à toute personne de créer librement une association ou d'y adhérer, sans autorisation préalable de l'administration — une simple déclaration en préfecture suffit."
+  },
+  {
+    id: "T_CR32",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "En application de la liberté individuelle, quelle proposition est correcte ? Une personne peut :",
+    a: ["Faire tout ce qu'elle souhaite sans aucune restriction, la liberté individuelle étant absolue", "Agir librement dès lors qu'elle ne porte pas atteinte aux droits d'autrui ni à l'ordre public, dans les limites fixées par la loi", "Refuser de se soumettre à toute décision de justice si elle la juge injuste", "S'affranchir des lois si elle invoque une conviction personnelle"],
+    correct: 1,
+    explanation: "Une personne peut agir librement dès lors qu'elle ne porte pas atteinte aux droits d'autrui ni à l'ordre public, dans les limites fixées par la loi. La liberté individuelle n'est donc jamais absolue."
+  },
+  {
+    id: "T_CR33",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Concernant la pratique de la religion, quelle proposition est correcte ?",
+    a: ["Elle est interdite dans tout espace accessible au public", "Chacun peut pratiquer la religion de son choix, dans un cadre privé ou associatif, dans le respect de l'ordre public", "Elle nécessite une autorisation préalable de la préfecture", "Seules les religions reconnues par le Concordat de 1801 peuvent être pratiquées"],
+    correct: 1,
+    explanation: "Chacun peut pratiquer librement la religion de son choix, notamment dans un cadre privé ou associatif (lieux de culte), dans le respect de l'ordre public et de la loi. La pratique religieuse n'est pas autorisée dans les services publics en raison de la neutralité de l'État."
+  },
+  {
+    id: "T_CR34",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "En tant que parent, peut-on refuser que son enfant participe aux cours de sport à l'école car ils sont mixtes ?",
+    a: ["Oui, sur simple lettre justifiant une conviction religieuse ou personnelle", "Non. La mixité est un principe de l'école publique et l'éducation physique fait partie des enseignements obligatoires", "Oui, à condition que l'enfant ait plus de 10 ans", "Oui, si un certificat médical le demande"],
+    correct: 1,
+    explanation: "Non. La mixité est un principe fondamental de l'école publique et l'éducation physique et sportive fait partie des enseignements obligatoires du programme, au même titre que les autres matières."
+  },
+  {
+    id: "T_CR35",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Les impôts permettent de financer les dépenses publiques. Quelle proposition est correcte ?",
+    a: ["Seuls les citoyens de nationalité française sont soumis à l'impôt en France", "Toute personne qui perçoit des revenus ou consomme en France contribue, selon les règles fiscales, au financement des services publics (écoles, hôpitaux, routes...)", "Les impôts financent exclusivement le budget de la Défense", "Le paiement de l'impôt est facultatif au-delà d'un certain âge"],
+    correct: 1,
+    explanation: "Toute personne qui perçoit des revenus ou qui consomme en France contribue, selon les règles fiscales en vigueur, au financement des services publics : écoles, hôpitaux, routes, sécurité, justice, etc. Cela concerne aussi bien les Français que les résidents étrangers."
+  },
+  {
+    id: "T_CR36",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Peut-on brûler publiquement un drapeau français ?",
+    a: ["Oui, cela relève entièrement de la liberté d'expression", "Non, cet acte constitue une infraction pénale car il porte atteinte à un symbole de la République", "Oui, uniquement lors d'une manifestation déclarée en préfecture", "Oui, si l'acte est filmé et diffusé à des fins journalistiques"],
+    correct: 1,
+    explanation: "Non. Le fait de détruire ou de dégrader publiquement un drapeau tricolore dans le cadre d'une manifestation organisée sur la voie publique est une infraction pénale, car cet acte porte atteinte à un symbole de la République."
+  },
+  {
+    id: "T_CR37",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que fait l'État pour lutter contre les discriminations ?",
+    a: ["Il laisse les employeurs libres de choisir leurs critères de recrutement", "Il interdit par la loi les discriminations (origine, sexe, religion, handicap...) et permet des recours devant la justice ou le Défenseur des droits", "Il n'intervient que si la victime est de nationalité française", "Il se limite à des campagnes de communication sans effet juridique"],
+    correct: 1,
+    explanation: "L'État interdit par la loi les discriminations fondées sur l'origine, le sexe, la religion, le handicap, l'orientation sexuelle, etc. Toute victime peut saisir la justice ou le Défenseur des droits, qui peut instruire gratuitement les réclamations."
+  },
+  {
+    id: "T_CR38",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Un employeur refuse d'embaucher des femmes dans son entreprise. Que dit la loi ?",
+    a: ["C'est autorisé s'il s'agit d'un métier physiquement exigeant", "C'est une discrimination interdite par la loi, punie pénalement, car le sexe ne peut fonder un refus d'embauche", "C'est autorisé pour les entreprises de moins de 10 salariés", "C'est autorisé si le règlement intérieur le prévoit"],
+    correct: 1,
+    explanation: "Refuser d'embaucher une personne en raison de son sexe est une discrimination interdite par la loi et pénalement sanctionnée. Le principe d'égalité professionnelle entre hommes et femmes s'applique à tous les employeurs, quel que soit le secteur."
+  },
+  {
+    id: "T_CR39",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Complétez ces paroles de la Marseillaise : \"Allons enfants de la [...]\"",
+    a: ["nation", "patrie", "liberté", "victoire"],
+    correct: 1,
+    explanation: "« Allons enfants de la patrie, le jour de gloire est arrivé ! » — premier vers de La Marseillaise, composée par Rouget de Lisle en 1792."
+  },
+  {
+    id: "T_CR40",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Complétez ces paroles de la Marseillaise : \"Aux armes [...] ! Formez vos bataillons\"",
+    a: ["soldats", "citoyens", "Français", "guerriers"],
+    correct: 1,
+    explanation: "« Aux armes, citoyens ! Formez vos bataillons, marchons, marchons ! » — refrain de La Marseillaise."
+  },
+  {
+    id: "T_CR41",
+    theme: "Les libertés approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'Homme et du Citoyen de 1789 ?",
+    a: ["« Le peuple est souverain et gouverne directement sans représentants »", "« Les hommes naissent et demeurent libres et égaux en droits »", "« La religion catholique est religion d'État »", "« La propriété est un privilège réservé à la noblesse »"],
+    correct: 1,
+    explanation: "L'article 1er de la DDHC de 1789 énonce : « Les hommes naissent et demeurent libres et égaux en droits. » C'est l'un des fondements des principes républicains français."
+  },
+
+  // --- Système institutionnel et politique (approfondi) ---
+  {
+    id: "T_CR42",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Le président de la République a commis un crime. Quelle proposition est correcte ?",
+    a: ["Il bénéficie d'une immunité totale et définitive, y compris après son mandat", "Il bénéficie d'une immunité limitée pendant son mandat, mais peut être jugé par la Haute Cour en cas de manquement grave, et poursuivi comme tout citoyen après son mandat", "Il ne peut jamais être jugé, quelle que soit la gravité des faits", "Seul le Conseil constitutionnel peut décider de sa culpabilité, sans procès"],
+    correct: 1,
+    explanation: "Pendant son mandat, le président bénéficie d'une immunité qui suspend les poursuites judiciaires ordinaires, sauf destitution prononcée par la Haute Cour en cas de manquement grave à ses devoirs. Une fois son mandat achevé, il peut être poursuivi et jugé comme tout citoyen."
+  },
+  {
+    id: "T_CR43",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est la durée du mandat du conseil municipal et du maire ?",
+    a: ["4 ans", "6 ans", "5 ans", "3 ans"],
+    correct: 1,
+    explanation: "6 ans. Le conseil municipal, qui élit le maire en son sein, est renouvelé lors des élections municipales organisées tous les 6 ans."
+  },
+  {
+    id: "T_CR44",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À la fin de son mandat, le président de la République peut-il décider de rester au pouvoir ?",
+    a: ["Oui, s'il estime que la situation politique le justifie", "Non. Il doit quitter ses fonctions et, s'il souhaite continuer, se représenter à une nouvelle élection", "Oui, pour une durée maximale de six mois supplémentaires", "Oui, si le Parlement le lui demande formellement"],
+    correct: 1,
+    explanation: "Non. À la fin de son mandat, le président doit quitter ses fonctions. S'il souhaite rester au pouvoir, il doit se présenter comme candidat à une nouvelle élection présidentielle et être réélu par les citoyens."
+  },
+  {
+    id: "T_CR45",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui dirige l'action du Gouvernement ?",
+    a: ["Le président de l'Assemblée nationale", "Le Premier ministre", "Le président du Sénat", "Le président de la République seul"],
+    correct: 1,
+    explanation: "Le Premier ministre dirige l'action du Gouvernement, coordonne le travail des ministres et est responsable de cette action devant l'Assemblée nationale."
+  },
+  {
+    id: "T_CR46",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est l'organisation administrative de la France ?",
+    a: ["L'État est organisé en un seul échelon centralisé, sans collectivités locales", "L'État est organisé en communes, départements et régions, qui disposent chacun de compétences propres", "L'État est organisé exclusivement en cantons autonomes", "L'État est organisé en provinces héritées de l'Ancien Régime"],
+    correct: 1,
+    explanation: "La France est organisée en collectivités territoriales : les communes, les départements et les régions, chacune disposant de compétences propres (urbanisme pour la commune, collèges et action sociale pour le département, lycées et développement économique pour la région), aux côtés des services de l'État."
+  },
+  {
+    id: "T_CR47",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel est le rôle principal des communes ?",
+    a: ["Voter les lois nationales et le budget de l'État", "Gérer les services de proximité : état civil, écoles primaires, urbanisme, voirie locale", "Nommer les préfets de région", "Organiser les élections présidentielles"],
+    correct: 1,
+    explanation: "Les communes gèrent les services de proximité : état civil (naissances, mariages), écoles primaires et maternelles, urbanisme, voirie locale, et les principaux équipements publics du quotidien."
+  },
+  {
+    id: "T_CR48",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel est le rôle principal du département ?",
+    a: ["Voter les lois relatives au droit du travail", "Gérer l'action sociale (aide aux personnes âgées, protection de l'enfance, RSA), les collèges et une partie de la voirie", "Gérer exclusivement les universités", "Nommer les ministres du Gouvernement"],
+    correct: 1,
+    explanation: "Le département gère principalement l'action sociale (aide aux personnes âgées et handicapées, protection de l'enfance, RSA), les collèges, ainsi qu'une partie de la voirie et des transports scolaires."
+  },
+  {
+    id: "T_CR49",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Combien de communes environ existe-t-il en France ?",
+    a: ["Environ 5 000", "Environ 35 000", "Environ 100 000", "Environ 500"],
+    correct: 1,
+    explanation: "Environ 35 000 communes, ce qui fait de la France le pays d'Europe comptant le plus grand nombre de communes."
+  },
+  {
+    id: "T_CR50",
+    theme: "Institutions approfondies — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Combien y a-t-il de régions en France (métropole et outre-mer compris) ?",
+    a: ["13 régions au total", "18 régions au total (13 en métropole et 5 outre-mer)", "27 régions au total", "22 régions au total"],
+    correct: 1,
+    explanation: "18 régions au total : 13 régions en métropole (depuis la réforme de 2016) et 5 régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte)."
+  },
+  {
+    id: "T_CR51",
+    theme: "UE approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "De quoi est composé le drapeau européen ?",
+    a: ["D'un cercle d'étoiles dont le nombre varie selon les adhésions de nouveaux États", "D'un cercle de 12 étoiles jaunes sur fond bleu, symbolisant l'unité et non le nombre d'États membres", "D'étoiles rouges disposées en carré sur fond blanc", "D'une étoile unique dorée au centre d'un fond bleu"],
+    correct: 1,
+    explanation: "Le drapeau européen est composé d'un cercle de 12 étoiles jaunes sur fond bleu. Le nombre 12 est fixe et symbolise la perfection et l'unité, il n'évolue pas avec le nombre d'États membres."
+  },
+
+  // --- Droits et devoirs (approfondi) ---
+  {
+    id: "T_CR52",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que signifie PMA ?",
+    a: ["Protection Maladie Assurée", "Procréation Médicalement Assistée", "Programme Ministériel d'Accompagnement", "Prestation Mensuelle d'Aide"],
+    correct: 1,
+    explanation: "PMA signifie Procréation Médicalement Assistée : ensemble des techniques médicales (insémination, fécondation in vitro...) permettant à des personnes de procréer avec une assistance médicale."
+  },
+  {
+    id: "T_CR53",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À quelle liberté la PMA fait-elle référence ?",
+    a: ["À la liberté de circulation", "À la liberté de disposer de son corps et de fonder une famille", "À la liberté d'expression", "À la liberté d'association"],
+    correct: 1,
+    explanation: "La PMA se rattache à la liberté de disposer de son corps et au droit de fonder une famille. Depuis la loi de bioéthique de 2021, elle est ouverte à tous les couples et aux femmes seules, sous conditions."
+  },
+  {
+    id: "T_CR54",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Le recours à l'avortement est-il autorisé ?",
+    a: ["Non, sauf en cas de danger vital pour la mère", "Oui. L'interruption volontaire de grossesse (IVG) est un droit garanti, désormais inscrit dans la Constitution française", "Oui, mais uniquement avec l'accord du conjoint", "Oui, uniquement avant 6 semaines de grossesse"],
+    correct: 1,
+    explanation: "Oui. L'IVG est un droit garanti en France, et depuis mars 2024, la liberté de recourir à l'IVG est inscrite dans la Constitution française — une première mondiale."
+  },
+  {
+    id: "T_CR55",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui peut demander à avorter ?",
+    a: ["Uniquement les femmes majeures de nationalité française", "Toute femme enceinte qui le souhaite, quelle que soit sa nationalité, dans les délais légaux", "Uniquement les femmes mariées avec l'accord de leur époux", "Uniquement les femmes ayant déjà un enfant"],
+    correct: 1,
+    explanation: "Toute femme enceinte qui le souhaite, quelle que soit sa nationalité ou sa situation, peut demander à avorter en France, dans les délais légaux prévus par la loi."
+  },
+  {
+    id: "T_CR56",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Une femme majeure de nationalité française a-t-elle le droit de voter aux élections ?",
+    a: ["Oui, depuis la Révolution française de 1789", "Oui, depuis l'ordonnance de 1944, appliquée pour la première fois en 1945", "Non, uniquement aux élections locales", "Oui, mais seulement depuis les années 1970"],
+    correct: 1,
+    explanation: "Oui. Les femmes ont obtenu le droit de vote et d'éligibilité en France par l'ordonnance du 21 avril 1944, appliqué pour la première fois lors des élections municipales de 1945."
+  },
+  {
+    id: "T_CR57",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que contient la Constitution ?",
+    a: ["Uniquement le programme du gouvernement en place", "L'organisation des pouvoirs publics (exécutif, législatif, judiciaire) et les grands principes fondamentaux de la République", "La liste détaillée de toutes les lois en vigueur", "Le budget annuel de l'État"],
+    correct: 1,
+    explanation: "La Constitution organise les pouvoirs publics (exécutif, législatif, judiciaire), fixe leurs relations, et pose les grands principes fondamentaux de la République (souveraineté, droits et libertés)."
+  },
+  {
+    id: "T_CR58",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel texte est le plus difficile à modifier en droit français ?",
+    a: ["Une loi ordinaire votée par le Parlement", "La Constitution, qui nécessite une procédure de révision spécifique (Congrès ou référendum)", "Un décret gouvernemental", "Un arrêté préfectoral"],
+    correct: 1,
+    explanation: "La Constitution est le texte le plus difficile à modifier : sa révision nécessite une procédure spécifique, avec un vote des deux chambres du Parlement en termes identiques, puis une adoption par référendum ou par le Congrès (Assemblée nationale et Sénat réunis) à la majorité des trois cinquièmes."
+  },
+  {
+    id: "T_CR59",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que signifie le droit de manifester ?",
+    a: ["Le droit de bloquer n'importe quelle voie publique sans formalité", "Le droit de se réunir et d'exprimer collectivement une opinion sur la voie publique, dans le cadre légal (déclaration préalable, respect de l'ordre public)", "Le droit d'organiser un rassemblement sans limite de durée ni de lieu", "Le droit réservé aux organisations syndicales uniquement"],
+    correct: 1,
+    explanation: "Le droit de manifester permet de se réunir et d'exprimer collectivement une opinion sur la voie publique. Il s'exerce dans un cadre légal : les manifestations doivent en général être déclarées en préfecture ou en mairie, et respecter l'ordre public."
+  },
+  {
+    id: "T_CR60",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Pour quel motif peut-on limiter la liberté d'expression ?",
+    a: ["Uniquement si l'auteur des propos est étranger", "Pour protéger l'ordre public, empêcher l'incitation à la haine ou à la violence, et protéger la réputation d'autrui", "Dès lors que les propos critiquent une décision du gouvernement", "Jamais : la liberté d'expression est absolue en France"],
+    correct: 1,
+    explanation: "La liberté d'expression peut être limitée pour protéger l'ordre public, empêcher l'incitation à la haine, à la discrimination ou à la violence, et protéger la réputation et les droits d'autrui (diffamation, injure)."
+  },
+  {
+    id: "T_CR61",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "L'État peut-il limiter les droits et libertés ?",
+    a: ["Non, jamais, les droits fondamentaux sont absolus et intouchables", "Oui, dans des cas précis et proportionnés, pour protéger l'ordre public, la santé publique ou les droits d'autrui", "Oui, à tout moment et sans justification", "Oui, uniquement en période électorale"],
+    correct: 1,
+    explanation: "Oui. L'État peut limiter certains droits et libertés, mais uniquement dans des cas précis, de manière proportionnée et encadrée par la loi : pour protéger l'ordre public, la santé publique, la sécurité ou les droits d'autrui."
+  },
+  {
+    id: "T_CR62",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel exemple illustre une limitation de liberté pour protéger l'intérêt général ?",
+    a: ["L'obligation de porter la ceinture de sécurité en voiture", "L'interdiction de voter pour les personnes de plus de 70 ans", "L'obligation de posséder un diplôme pour se marier", "L'interdiction de changer de religion"],
+    correct: 0,
+    explanation: "L'obligation de porter la ceinture de sécurité limite la liberté individuelle mais vise à protéger la santé et la vie, dans l'intérêt général. D'autres exemples : port du casque à moto, limitations de vitesse, interdiction de fumer dans les lieux publics."
+  },
+  {
+    id: "T_CR63",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle proposition représente un exemple de crime ?",
+    a: ["Un excès de vitesse de 20 km/h", "Un meurtre", "Un vol de bicyclette non aggravé", "Un stationnement gênant"],
+    correct: 1,
+    explanation: "Un meurtre est un crime, l'infraction la plus grave, jugé par la cour d'assises. Le vol simple ou l'excès de vitesse relèvent généralement du délit ou de la contravention selon les circonstances."
+  },
+  {
+    id: "T_CR64",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle proposition représente un exemple de délit ?",
+    a: ["Un vol simple", "Un stationnement interdit", "Un meurtre", "Un crime contre l'humanité"],
+    correct: 0,
+    explanation: "Un vol simple est un délit, jugé par le tribunal correctionnel. Le stationnement interdit est une contravention ; le meurtre et les crimes contre l'humanité sont des crimes, jugés par la cour d'assises ou une cour criminelle."
+  },
+  {
+    id: "T_CR65",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que doit-on faire face aux ordres des policiers ou gendarmes ?",
+    a: ["On peut les ignorer si l'on n'est pas d'accord avec la demande", "On doit s'y conformer ; en cas de désaccord, il est possible de le contester ensuite par les voies légales (plainte, réclamation)", "On peut y résister physiquement si l'on estime le contrôle injustifié", "On doit obéir uniquement si l'agent est en uniforme complet"],
+    correct: 1,
+    explanation: "On doit se conformer aux ordres légitimes des forces de l'ordre. En cas de désaccord ou d'abus supposé, la contestation doit se faire par les voies légales a posteriori (plainte, saisine du Défenseur des droits), et non par la résistance sur le moment."
+  },
+  {
+    id: "T_CR66",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel est un exemple d'assistance à personne en danger ?",
+    a: ["Filmer une personne en train de se noyer sans intervenir ni alerter les secours", "Prévenir les secours (15, 17 ou 18) en voyant une personne inconsciente sur la voie publique", "Continuer sa route sans s'arrêter en cas d'accident de la route", "Ignorer un appel à l'aide pour ne pas être impliqué"],
+    correct: 1,
+    explanation: "Prévenir les secours en voyant une personne en danger constitue une assistance à personne en danger. En France, la non-assistance à personne en danger est une infraction pénale : chacun a l'obligation d'agir ou d'alerter les secours."
+  },
+  {
+    id: "T_CR67",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est l'attitude à avoir lorsqu'on est témoin de violences ?",
+    a: ["Ne pas s'en mêler pour éviter tout ennui", "Alerter les secours ou la police (17), et, si possible, porter assistance sans se mettre en danger", "Attendre que la victime porte plainte elle-même avant d'agir", "Filmer la scène pour la publier sur les réseaux sociaux sans prévenir personne"],
+    correct: 1,
+    explanation: "Il faut alerter les secours ou la police (17) et, si possible, porter assistance sans se mettre soi-même en danger. Rester passif face à des violences peut constituer une non-assistance à personne en danger."
+  },
+  {
+    id: "T_CR68",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Concernant l'utilisation des réseaux sociaux, quelle proposition est correcte ?",
+    a: ["Tout y est permis car l'anonymat protège des poursuites", "Les mêmes règles qu'ailleurs s'appliquent : injure, diffamation, harcèlement ou incitation à la haine y sont interdits et punissables", "Les publications sur les réseaux sociaux ne peuvent jamais être utilisées comme preuve en justice", "Seuls les mineurs peuvent être sanctionnés pour leurs publications"],
+    correct: 1,
+    explanation: "Les mêmes règles de droit qu'ailleurs s'appliquent sur les réseaux sociaux : injure, diffamation, harcèlement en ligne ou incitation à la haine sont interdits et punissables, même sous pseudonyme, l'anonymat n'étant pas une protection juridique."
+  },
+  {
+    id: "T_CR69",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Jeter un mégot par terre est :",
+    a: ["Toléré s'il est complètement éteint", "Une infraction (contravention) passible d'une amende, notamment en raison de son impact environnemental", "Autorisé dans les grandes villes uniquement", "Un simple manquement civique sans sanction"],
+    correct: 1,
+    explanation: "Jeter un mégot sur la voie publique est une infraction passible d'une amende, en raison de son impact sur l'environnement (pollution des sols et de l'eau, risque d'incendie)."
+  },
+  {
+    id: "T_CR70",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Pourquoi doit-on trier ses déchets ?",
+    a: ["Pour respecter une simple tradition locale sans valeur légale", "Pour permettre le recyclage, réduire la pollution, et parce que c'est une obligation environnementale et civique", "Uniquement pour réduire sa propre facture de gaz", "Le tri n'est utile qu'en zone rurale"],
+    correct: 1,
+    explanation: "Le tri des déchets permet leur recyclage et réduit la pollution. C'est une obligation environnementale et civique : chacun contribue ainsi à la protection de l'environnement, un droit et un devoir reconnus par la Charte de l'environnement."
+  },
+  {
+    id: "T_CR71",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Parmi ces actions, laquelle permet d'adopter une attitude respectueuse de l'environnement ?",
+    a: ["Laisser couler l'eau inutilement", "Trier ses déchets et limiter sa consommation d'énergie et d'eau", "Jeter les déchets électroniques avec les ordures ménagères", "Utiliser systématiquement la voiture pour de très courts trajets"],
+    correct: 1,
+    explanation: "Trier ses déchets et limiter sa consommation d'énergie et d'eau sont des gestes simples qui respectent l'environnement, conformément au devoir de protection de l'environnement reconnu par la Charte de l'environnement de 2004."
+  },
+  {
+    id: "T_CR72",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle obligation concerne toutes les personnes résidant en France, quelle que soit leur nationalité ?",
+    a: ["L'obligation de voter aux élections locales", "L'obligation de respecter la loi française", "L'obligation d'adhérer à un parti politique", "L'obligation de posséder un compte bancaire français"],
+    correct: 1,
+    explanation: "L'obligation de respecter la loi française s'applique à toute personne résidant en France, quelle que soit sa nationalité. Nul ne peut s'en exonérer, même temporairement."
+  },
+  {
+    id: "T_CR73",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle proposition constitue une obligation, et non un droit ?",
+    a: ["Le droit de vote", "L'instruction des enfants de 3 à 16 ans", "La liberté d'expression", "Le droit à un procès équitable"],
+    correct: 1,
+    explanation: "L'instruction des enfants de 3 à 16 ans est une obligation légale pour les parents. Le droit de vote, la liberté d'expression et le droit à un procès équitable sont, eux, des droits."
+  },
+  {
+    id: "T_CR74",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "S'agissant des déchets, quelle proposition est correcte ?",
+    a: ["Chaque foyer peut les brûler librement dans son jardin", "Ils doivent être triés et déposés dans les circuits prévus (poubelles, points de tri, déchetteries) selon les règles fixées par la commune", "Ils peuvent être abandonnés sur la voie publique s'ils sont peu encombrants", "Leur gestion est facultative pour les résidents de moins d'un an"],
+    correct: 1,
+    explanation: "Les déchets doivent être triés et déposés dans les circuits prévus (poubelles, points de tri, déchetteries), selon les règles fixées par chaque commune. Le brûlage à l'air libre ou l'abandon sur la voie publique sont interdits et passibles d'amende."
+  },
+  {
+    id: "T_CR75",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
+    a: ["Au nom de la volonté personnelle du président de la République", "Au nom de l'ordre public, de la protection de la santé, de la sécurité ou des droits d'autrui, et toujours dans un cadre proportionné fixé par la loi", "Au nom de considérations religieuses officielles", "Au nom de la seule opinion majoritaire exprimée dans les sondages"],
+    correct: 1,
+    explanation: "L'État justifie la restriction de certains droits au nom de l'ordre public, de la protection de la santé publique, de la sécurité ou des droits d'autrui. Ces restrictions doivent rester proportionnées et être prévues par la loi, sous le contrôle du juge."
+  },
+  {
+    id: "T_CR76",
+    theme: "Droits et devoirs approfondis — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Concernant le droit de se marier, quelle proposition est correcte ?",
+    a: ["Le mariage est ouvert à deux personnes majeures, libres et consentantes, quel que soit leur sexe, depuis la loi du 17 mai 2013", "Le mariage entre personnes du même sexe est interdit en France", "Le consentement d'un seul des deux futurs époux suffit si l'autre est mineur", "Le mariage n'est reconnu que s'il est célébré religieusement"],
+    correct: 0,
+    explanation: "Depuis la loi du 17 mai 2013 (dite « mariage pour tous »), le mariage est ouvert à deux personnes majeures, libres et consentantes, quel que soit leur sexe. Seul le mariage célébré devant un officier d'état civil a une valeur juridique en France."
+  },
+
+  // --- Histoire, géographie et culture (approfondi) ---
+  {
+    id: "T_CR77",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel était le surnom de Louis XIV ?",
+    a: ["Le Roi Soleil", "Le Roi de Fer", "Le Bien-Aimé", "Le Grand Monarque"],
+    correct: 0,
+    explanation: "Louis XIV (1638-1715) était surnommé « le Roi Soleil », symbole de la monarchie absolue française. Il régna 72 ans, la plus longue durée de règne de l'histoire de France."
+  },
+  {
+    id: "T_CR78",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel roi de France a été exécuté pendant la Révolution française ?",
+    a: ["Louis XIV", "Louis XVI", "Louis XV", "Louis XVIII"],
+    correct: 1,
+    explanation: "Louis XVI a été guillotiné le 21 janvier 1793, place de la Révolution (actuelle place de la Concorde) à Paris."
+  },
+  {
+    id: "T_CR79",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "En quelle année Napoléon Ier est-il devenu empereur ?",
+    a: ["1799", "1804", "1789", "1815"],
+    correct: 1,
+    explanation: "En 1804, Napoléon Bonaparte se fait sacrer empereur des Français sous le nom de Napoléon Ier. Il était devenu Premier Consul dès 1799 après le coup d'État du 18 Brumaire."
+  },
+  {
+    id: "T_CR80",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "De quand date l'appel à la résistance du général de Gaulle ?",
+    a: ["Du 14 juillet 1940", "Du 18 juin 1940", "Du 11 novembre 1940", "Du 8 mai 1940"],
+    correct: 1,
+    explanation: "Le 18 juin 1940, depuis Londres, le général de Gaulle lance sur les ondes de la BBC un appel à poursuivre le combat contre l'Allemagne nazie, fondateur de la Résistance française."
+  },
+  {
+    id: "T_CR81",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Pourquoi la Shoah est-elle étudiée à l'école ?",
+    a: ["Pour se concentrer uniquement sur l'histoire militaire de la Seconde Guerre mondiale", "Pour transmettre la mémoire de ce génocide, comprendre ses mécanismes et prévenir toute résurgence de la haine et de l'antisémitisme", "Parce que c'est une exigence imposée par une organisation internationale sans lien avec l'histoire nationale", "Uniquement dans le cadre de cours d'histoire des religions"],
+    correct: 1,
+    explanation: "La Shoah est étudiée à l'école pour transmettre la mémoire de ce génocide, en comprendre les mécanismes, et prévenir toute résurgence de la haine, de l'antisémitisme et des idéologies totalitaires."
+  },
+  {
+    id: "T_CR82",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
+    a: ["Depuis 1958", "Depuis 1965", "Depuis 1981", "Depuis 1945"],
+    correct: 1,
+    explanation: "Depuis 1965, à la suite d'une révision constitutionnelle adoptée par référendum en 1962 à l'initiative du général de Gaulle. Charles de Gaulle avait été élu en 1958 par un collège de grands électeurs."
+  },
+  {
+    id: "T_CR83",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est la première étape de la construction européenne en 1951 ?",
+    a: ["Le traité de Rome créant la CEE", "La création de la Communauté Européenne du Charbon et de l'Acier (CECA)", "Le traité de Maastricht", "La création de l'espace Schengen"],
+    correct: 1,
+    explanation: "En 1951, le traité de Paris crée la Communauté Européenne du Charbon et de l'Acier (CECA), première étape de la construction européenne, réunissant six pays dont la France et l'Allemagne."
+  },
+  {
+    id: "T_CR84",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Durant le mandat de quel président la peine de mort a-t-elle été abolie ?",
+    a: ["Charles de Gaulle", "François Mitterrand", "Valéry Giscard d'Estaing", "Jacques Chirac"],
+    correct: 1,
+    explanation: "François Mitterrand, élu en 1981. La loi abolissant la peine de mort a été votée le 9 octobre 1981 à l'initiative de son garde des Sceaux, Robert Badinter."
+  },
+  {
+    id: "T_CR85",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel régime politique a été mis en place pendant la Révolution française en 1792 ?",
+    a: ["La Ire République", "La monarchie constitutionnelle", "L'Empire", "La IIe République"],
+    correct: 0,
+    explanation: "La Ire République est proclamée le 22 septembre 1792, après l'abolition de la monarchie. Elle marque la fin du règne de Louis XVI et le début du régime républicain en France."
+  },
+  {
+    id: "T_CR86",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "En 1944, qu'est-ce qui a changé pour les femmes ?",
+    a: ["Elles ont obtenu le droit de travailler sans l'accord de leur mari", "Elles ont obtenu le droit de vote et d'éligibilité", "Elles ont obtenu le droit à la contraception", "Elles ont obtenu l'égalité salariale garantie par la loi"],
+    correct: 1,
+    explanation: "En 1944, l'ordonnance du général de Gaulle accorde aux femmes le droit de vote et d'éligibilité, appliqué pour la première fois lors des élections municipales d'avril 1945."
+  },
+  {
+    id: "T_CR87",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle organisation internationale a été créée en 1945 après la Seconde Guerre mondiale ?",
+    a: ["L'Union européenne", "L'Organisation des Nations unies (ONU)", "L'OTAN", "L'OMC"],
+    correct: 1,
+    explanation: "L'Organisation des Nations unies (ONU) a été créée en 1945, avec pour objectif de maintenir la paix et la sécurité internationales après les deux guerres mondiales."
+  },
+  {
+    id: "T_CR88",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Où a eu lieu le débarquement des forces alliées en 1944 ?",
+    a: ["En Provence uniquement", "En Normandie, le 6 juin 1944", "En Bretagne", "Dans le Nord-Pas-de-Calais"],
+    correct: 1,
+    explanation: "Le débarquement allié a eu lieu en Normandie le 6 juin 1944 (« D-Day »), marquant le début de la libération de la France occupée. Un second débarquement a eu lieu en Provence en août 1944."
+  },
+  {
+    id: "T_CR89",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Que fête-t-on le 8 mai ?",
+    a: ["La prise de la Bastille", "La capitulation de l'Allemagne nazie en 1945, marquant la fin de la Seconde Guerre mondiale en Europe", "La fête du Travail", "L'armistice de 1918"],
+    correct: 1,
+    explanation: "Le 8 mai commémore la capitulation sans conditions de l'Allemagne nazie en 1945, marquant la fin de la Seconde Guerre mondiale sur le continent européen."
+  },
+  {
+    id: "T_CR90",
+    theme: "Histoire approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel continent a été le plus concerné par la décolonisation française après la Seconde Guerre mondiale ?",
+    a: ["L'Amérique du Sud", "L'Afrique et l'Asie", "L'Océanie exclusivement", "L'Europe de l'Est"],
+    correct: 1,
+    explanation: "L'Afrique (Maghreb, Afrique subsaharienne) et l'Asie (Indochine) ont été les continents les plus concernés par la décolonisation française, principalement entre les années 1950 et 1960."
+  },
+  {
+    id: "T_CR91",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel pays a une frontière terrestre avec la France métropolitaine au nord-est ?",
+    a: ["L'Espagne", "La Belgique et l'Allemagne", "L'Italie", "Le Portugal"],
+    correct: 1,
+    explanation: "Au nord-est, la France métropolitaine partage des frontières terrestres avec la Belgique, le Luxembourg et l'Allemagne. L'Espagne se trouve au sud-ouest, et l'Italie au sud-est."
+  },
+  {
+    id: "T_CR92",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Lequel de ces pays partage une frontière terrestre avec la France métropolitaine ?",
+    a: ["Le Portugal", "La Suisse", "Les Pays-Bas", "Le Royaume-Uni"],
+    correct: 1,
+    explanation: "La Suisse partage une frontière terrestre avec la France, tout comme la Belgique, le Luxembourg, l'Allemagne, l'Italie, l'Espagne, Andorre et Monaco. Le Royaume-Uni est séparé de la France par la Manche."
+  },
+  {
+    id: "T_CR93",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle mer se situe entre la France et l'Angleterre ?",
+    a: ["La mer Méditerranée", "La Manche", "La mer du Nord", "La mer Baltique"],
+    correct: 1,
+    explanation: "La Manche sépare la France de l'Angleterre. Elle est traversée par le tunnel sous la Manche, qui relie Calais à Douvres."
+  },
+  {
+    id: "T_CR94",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle chaîne de montagnes est située entre la France et l'Espagne ?",
+    a: ["Les Alpes", "Les Pyrénées", "Le Massif central", "Les Vosges"],
+    correct: 1,
+    explanation: "Les Pyrénées séparent la France de l'Espagne, sur environ 650 km. La principauté d'Andorre est également située dans cette chaîne de montagnes."
+  },
+  {
+    id: "T_CR95",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qu'est-ce que la France d'outre-mer ?",
+    a: ["Des anciennes colonies aujourd'hui indépendantes mais alliées de la France", "Des territoires français situés hors d'Europe (Antilles, Guyane, La Réunion, Mayotte, Pacifique...), soumis à des statuts variés", "Uniquement des territoires militaires sans population civile", "Un synonyme de l'Union européenne"],
+    correct: 1,
+    explanation: "La France d'outre-mer regroupe des territoires français situés hors d'Europe : départements et régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte) et collectivités d'outre-mer (Polynésie française, Nouvelle-Calédonie...), avec des statuts juridiques variés."
+  },
+  {
+    id: "T_CR96",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle île française se trouve dans l'océan Indien ?",
+    a: ["La Corse", "La Réunion", "La Guadeloupe", "La Nouvelle-Calédonie"],
+    correct: 1,
+    explanation: "La Réunion, ainsi que Mayotte, sont des îles françaises situées dans l'océan Indien. La Corse est en Méditerranée, la Guadeloupe dans les Caraïbes, et la Nouvelle-Calédonie dans le Pacifique."
+  },
+  {
+    id: "T_CR97",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est la population approximative de la France en 2025 ?",
+    a: ["Environ 40 millions d'habitants", "Environ 68 millions d'habitants", "Environ 100 millions d'habitants", "Environ 55 millions d'habitants"],
+    correct: 1,
+    explanation: "La France compte environ 68 millions d'habitants en 2025 (métropole et outre-mer), selon les estimations de l'Insee."
+  },
+  {
+    id: "T_CR98",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel fleuve traverse Paris ?",
+    a: ["La Loire", "La Seine", "Le Rhône", "La Garonne"],
+    correct: 1,
+    explanation: "La Seine traverse Paris. Elle prend sa source en Bourgogne et se jette dans la Manche au Havre, après 777 km."
+  },
+  {
+    id: "T_CR99",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Où habite la majorité des Français ?",
+    a: ["Dans des zones rurales isolées", "Dans des zones urbaines et périurbaines", "Principalement en montagne", "Principalement sur les côtes uniquement"],
+    correct: 1,
+    explanation: "La majorité des Français vit dans des zones urbaines et périurbaines. L'Île-de-France (région parisienne) est la région la plus peuplée du pays."
+  },
+  {
+    id: "T_CR100",
+    theme: "Géographie approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle région française est la plus peuplée ?",
+    a: ["Provence-Alpes-Côte d'Azur", "L'Île-de-France", "L'Occitanie", "Les Hauts-de-France"],
+    correct: 1,
+    explanation: "L'Île-de-France (région parisienne) est la région la plus peuplée de France, avec plus de 12 millions d'habitants."
+  },
+  {
+    id: "T_CR101",
+    theme: "Culture approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle cathédrale célèbre a été en partie détruite par un incendie en 2019 ?",
+    a: ["La cathédrale de Reims", "La cathédrale Notre-Dame de Paris", "La basilique du Sacré-Cœur", "La cathédrale de Chartres"],
+    correct: 1,
+    explanation: "La cathédrale Notre-Dame de Paris a été gravement endommagée par un incendie le 15 avril 2019. Elle a été restaurée et rouverte au public en décembre 2024."
+  },
+  {
+    id: "T_CR102",
+    theme: "Culture approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui était Auguste Rodin ?",
+    a: ["Un peintre impressionniste français", "Un sculpteur français, auteur du Penseur", "Un architecte du XIXe siècle", "Un écrivain naturaliste"],
+    correct: 1,
+    explanation: "Auguste Rodin (1840-1917) : sculpteur français, considéré comme le père de la sculpture moderne, auteur d'œuvres célèbres comme Le Penseur ou Le Baiser."
+  },
+  {
+    id: "T_CR103",
+    theme: "Culture approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui était Auguste Renoir ?",
+    a: ["Un sculpteur du XVIIIe siècle", "Un peintre français, figure majeure du mouvement impressionniste", "Un philosophe des Lumières", "Un compositeur d'opéra"],
+    correct: 1,
+    explanation: "Pierre-Auguste Renoir (1841-1919) : peintre français, l'une des figures majeures du mouvement impressionniste, connu pour ses scènes de vie et ses portraits lumineux."
+  },
+  {
+    id: "T_CR104",
+    theme: "Culture approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui était Marguerite Yourcenar ?",
+    a: ["Une chanteuse populaire du XXe siècle", "Une écrivaine française, première femme élue à l'Académie française", "Une résistante devenue ministre", "Une exploratrice polaire"],
+    correct: 1,
+    explanation: "Marguerite Yourcenar (1903-1987) : écrivaine, première femme élue à l'Académie française en 1980, auteure notamment des Mémoires d'Hadrien."
+  },
+  {
+    id: "T_CR105",
+    theme: "Culture approfondie — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel est le classement de la langue française parmi les langues les plus parlées dans le monde ?",
+    a: ["Elle figure parmi les cinq langues les plus parlées au monde", "Elle n'est parlée que dans un seul pays", "Elle est la langue la plus parlée au monde", "Elle est parlée uniquement en Europe"],
+    correct: 0,
+    explanation: "Le français figure parmi les cinq langues les plus parlées au monde, en tenant compte du nombre de locuteurs répartis sur les cinq continents grâce à la Francophonie."
+  },
+
+  // --- Vivre dans la société française (approfondi) ---
+  {
+    id: "T_CR106",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel mariage est reconnu par l'État ?",
+    a: ["Uniquement le mariage religieux célébré dans un lieu de culte", "Uniquement le mariage civil célébré devant un officier d'état civil, en mairie", "Le mariage coutumier célébré selon les traditions du pays d'origine", "Tout engagement mutuel entre deux personnes, sans formalité"],
+    correct: 1,
+    explanation: "Seul le mariage civil, célébré devant un officier d'état civil en mairie, est reconnu juridiquement par l'État français. Une cérémonie religieuse peut avoir lieu ensuite, mais elle n'a pas de valeur légale en elle-même."
+  },
+  {
+    id: "T_CR107",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Auprès de quelle institution les parents peuvent-ils inscrire leur enfant à l'école publique ?",
+    a: ["Auprès du tribunal judiciaire", "Auprès de la mairie de leur domicile", "Auprès de la préfecture", "Auprès du rectorat uniquement"],
+    correct: 1,
+    explanation: "Les parents inscrivent leur enfant auprès de la mairie de leur domicile, qui les oriente ensuite vers l'école publique correspondant à leur secteur."
+  },
+  {
+    id: "T_CR108",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "En cas de divorce, qui exerce l'autorité parentale ?",
+    a: ["Automatiquement le père", "En principe, les deux parents continuent à l'exercer conjointement, sauf décision contraire du juge", "Automatiquement la mère si l'enfant a moins de 10 ans", "Elle disparaît dès le prononcé du divorce"],
+    correct: 1,
+    explanation: "En principe, les deux parents continuent à exercer conjointement l'autorité parentale après le divorce, dans l'intérêt de l'enfant, sauf décision contraire du juge aux affaires familiales."
+  },
+  {
+    id: "T_CR109",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle aide permet aux personnes ayant des difficultés financières d'avoir un avocat ?",
+    a: ["Le RSA", "L'aide juridictionnelle", "L'Aide Médicale d'État (AME)", "La prime d'activité"],
+    correct: 1,
+    explanation: "L'aide juridictionnelle permet, sous conditions de ressources, la prise en charge totale ou partielle des frais d'avocat et de justice pour les personnes disposant de faibles revenus."
+  },
+  {
+    id: "T_CR110",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Où faut-il déclarer la naissance d'un enfant ?",
+    a: ["Au commissariat de police", "À la mairie du lieu de naissance, dans les 5 jours", "À la préfecture", "À la Caisse d'allocations familiales uniquement"],
+    correct: 1,
+    explanation: "La naissance doit être déclarée à la mairie du lieu de naissance, dans les 5 jours suivant l'accouchement, afin d'établir l'acte de naissance."
+  },
+  {
+    id: "T_CR111",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est l'une des conditions pour passer l'examen du permis de conduire ?",
+    a: ["Être titulaire d'un diplôme universitaire", "Avoir suivi une formation dans une auto-école agréée et réussir l'épreuve théorique (code) puis pratique (conduite)", "Posséder déjà un véhicule immatriculé à son nom", "Avoir un casier judiciaire totalement vierge"],
+    correct: 1,
+    explanation: "Il faut suivre une formation dans une auto-école agréée, réussir l'épreuve théorique générale (le « code »), puis l'épreuve pratique de conduite."
+  },
+  {
+    id: "T_CR112",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Un bail locatif est valide s'il est :",
+    a: ["Uniquement un accord oral entre les deux parties", "Écrit et signé par le propriétaire et le locataire, précisant les conditions de la location", "Signé uniquement par le locataire", "Validé par la mairie avant toute signature"],
+    correct: 1,
+    explanation: "Un bail locatif doit être écrit et signé par le propriétaire (bailleur) et le locataire, précisant la durée, le loyer et les conditions de la location, conformément à la loi."
+  },
+  {
+    id: "T_CR113",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Où peut-on déposer un lave-vaisselle cassé ?",
+    a: ["Sur le trottoir devant son domicile", "Dans une déchetterie, ou le faire enlever via un service de collecte des encombrants", "Dans une poubelle de tri classique", "Dans une benne à verre"],
+    correct: 1,
+    explanation: "Un appareil électroménager cassé doit être déposé dans une déchetterie, ou faire l'objet d'une collecte d'encombrants organisée par la commune. L'abandon sur la voie publique est une infraction."
+  },
+  {
+    id: "T_CR114",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel numéro d'urgence permet d'appeler la police ?",
+    a: ["Le 15", "Le 17", "Le 18", "Le 119"],
+    correct: 1,
+    explanation: "Le 17 permet d'appeler la police ou la gendarmerie. Le 15 est réservé au SAMU, le 18 aux pompiers, et le 112 est le numéro d'urgence européen unique."
+  },
+  {
+    id: "T_CR115",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À qui est accessible la contraception en France ?",
+    a: ["Uniquement aux personnes mariées", "À toute personne, y compris les mineures, avec un accès facilité et parfois gratuit selon l'âge", "Uniquement aux personnes majeures", "Uniquement sur autorisation parentale, quel que soit l'âge"],
+    correct: 1,
+    explanation: "La contraception est accessible à toute personne en France, y compris les mineures, avec un accès facilité (délivrance sans ordonnance pour certains moyens) et une gratuité pour les mineures et les jeunes femmes selon les dispositifs en vigueur."
+  },
+  {
+    id: "T_CR116",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qu'est-ce que le principe de confidentialité dans le domaine de la santé ?",
+    a: ["L'obligation pour le médecin de transmettre les informations médicales à l'employeur", "Le secret médical, qui protège les informations relatives à la santé d'un patient et s'impose aux professionnels de santé", "Un droit réservé aux patients de nationalité française", "L'interdiction pour un patient de consulter son propre dossier médical"],
+    correct: 1,
+    explanation: "Le principe de confidentialité renvoie au secret médical, qui protège les informations relatives à la santé d'un patient. Il s'impose à tous les professionnels de santé et ne peut être levé que dans des cas très encadrés par la loi."
+  },
+  {
+    id: "T_CR117",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "L'inscription à l'Assurance maladie est :",
+    a: ["Facultative pour les personnes ayant une mutuelle privée", "Obligatoire pour toute personne résidant en France de manière stable et régulière", "Réservée aux salariés en contrat à durée indéterminée", "Payante et optionnelle selon les revenus"],
+    correct: 1,
+    explanation: "L'affiliation à l'Assurance maladie (Sécurité sociale) est obligatoire pour toute personne résidant en France de manière stable et régulière, qu'elle travaille ou non."
+  },
+  {
+    id: "T_CR118",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui peut demander un congé parental d'éducation ?",
+    a: ["Uniquement la mère de l'enfant", "Tout salarié, homme ou femme, ayant un an d'ancienneté, à l'occasion d'une naissance ou d'une adoption", "Uniquement les fonctionnaires titulaires", "Uniquement les parents de plus de trois enfants"],
+    correct: 1,
+    explanation: "Tout salarié, homme ou femme, justifiant d'un an d'ancienneté dans l'entreprise, peut demander un congé parental d'éducation à l'occasion d'une naissance ou d'une adoption."
+  },
+  {
+    id: "T_CR119",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelles sont les affaires traitées par le conseil de prud'hommes ?",
+    a: ["Les litiges entre particuliers portant sur un bail locatif", "Les litiges individuels entre un salarié et son employeur, liés au contrat de travail", "Les infractions pénales graves", "Les litiges entre deux entreprises commerciales"],
+    correct: 1,
+    explanation: "Le conseil de prud'hommes est une juridiction spécialisée qui traite les litiges individuels entre un salarié et son employeur, liés à l'exécution ou à la rupture du contrat de travail."
+  },
+  {
+    id: "T_CR120",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Travailler sans être déclaré est :",
+    a: ["Autorisé pour des missions ponctuelles de moins d'une semaine", "Illégal (travail dissimulé), sanctionné pénalement et privant le salarié de ses droits sociaux", "Légal si l'employeur paie l'employé en espèces", "Toléré pour les emplois à domicile"],
+    correct: 1,
+    explanation: "Travailler sans être déclaré constitue un travail dissimulé, illégal et sanctionné pénalement pour l'employeur comme pour le salarié. Cela prive aussi ce dernier de ses droits sociaux (retraite, chômage, maladie, accident du travail)."
+  },
+  {
+    id: "T_CR121",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Lorsqu'un employeur veut qu'un salarié travaille plus longtemps que la durée prévue dans le contrat de travail :",
+    a: ["Il peut l'imposer librement et sans compensation", "Il doit respecter les règles encadrant les heures supplémentaires (accord du salarié le cas échéant, majoration de salaire ou repos compensateur)", "Le salarié n'a aucun recours possible", "Cela ne concerne que les cadres, non les autres salariés"],
+    correct: 1,
+    explanation: "Les heures supplémentaires sont encadrées par la loi : elles doivent en général respecter des limites, donner lieu à une majoration de salaire ou à un repos compensateur, dans les conditions prévues par le Code du travail ou la convention collective."
+  },
+  {
+    id: "T_CR122",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelle est la mission de France Travail ?",
+    a: ["Fixer le montant du SMIC chaque année", "Accompagner les demandeurs d'emploi, verser les allocations chômage et aider les employeurs à recruter", "Délivrer les titres de séjour", "Gérer exclusivement la formation des fonctionnaires"],
+    correct: 1,
+    explanation: "France Travail (anciennement Pôle emploi) accompagne les personnes en recherche d'emploi, verse les allocations chômage aux ayants droit, et aide les employeurs dans leurs recrutements."
+  },
+  {
+    id: "T_CR123",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Dans une entreprise, le droit syndical permet :",
+    a: ["Aux salariés de se regrouper au sein d'un syndicat pour défendre collectivement leurs intérêts professionnels", "Uniquement à l'employeur de créer un syndicat", "De remplacer le contrat de travail individuel", "D'obtenir automatiquement une augmentation de salaire"],
+    correct: 0,
+    explanation: "Le droit syndical permet aux salariés de se regrouper librement au sein d'un syndicat pour défendre collectivement leurs intérêts professionnels, négocier des accords et être représentés face à l'employeur."
+  },
+  {
+    id: "T_CR124",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Dans une entreprise, le droit de grève autorise :",
+    a: ["Les salariés à cesser collectivement le travail pour défendre leurs revendications professionnelles, dans un cadre légal", "Les salariés à ne plus jamais revenir travailler après l'arrêt", "L'employeur à licencier immédiatement les grévistes", "Uniquement les cadres à interrompre leur activité"],
+    correct: 0,
+    explanation: "Le droit de grève, garanti par la Constitution, autorise les salariés à cesser collectivement le travail pour défendre des revendications professionnelles, dans un cadre légal encadré (notamment un préavis dans certains secteurs)."
+  },
+  {
+    id: "T_CR125",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quelles sont les conditions pour toucher les allocations chômage ?",
+    a: ["Il suffit d'être majeur et résider en France", "Avoir travaillé un nombre minimum d'heures ou de jours, être inscrit comme demandeur d'emploi et rechercher activement un travail", "Avoir été licencié pour faute grave", "Ne jamais avoir travaillé auparavant"],
+    correct: 1,
+    explanation: "Pour toucher les allocations chômage, il faut avoir travaillé un nombre minimum d'heures ou de jours sur une période de référence, être inscrit comme demandeur d'emploi auprès de France Travail, et rechercher activement un emploi."
+  },
+  {
+    id: "T_CR126",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qu'est-ce que l'école maternelle ?",
+    a: ["Un mode de garde payant réservé aux enfants de cadres", "Le premier niveau de l'enseignement scolaire, accueillant les enfants dès 3 ans, devenu obligatoire depuis 2019", "Un établissement facultatif réservé aux enfants en situation de handicap", "Un service géré uniquement par des associations privées"],
+    correct: 1,
+    explanation: "L'école maternelle est le premier niveau de l'enseignement scolaire en France. Depuis la loi de 2019, l'instruction est obligatoire dès l'âge de 3 ans, ce qui rend la scolarisation en maternelle obligatoire à partir de cet âge."
+  },
+  {
+    id: "T_CR127",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Comment s'appelle le diplôme passé par les élèves à la fin du collège ?",
+    a: ["Le baccalauréat", "Le diplôme national du brevet (DNB)", "Le certificat d'études primaires", "Le CAP"],
+    correct: 1,
+    explanation: "Le diplôme national du brevet (DNB), plus couramment appelé « brevet des collèges », est passé par les élèves en classe de 3e, à la fin du collège."
+  },
+  {
+    id: "T_CR128",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Les parents d'élève ont le droit de :",
+    a: ["Choisir librement les enseignants de leur enfant", "Être informés de la scolarité de leur enfant et de participer, via des représentants élus, à la vie de l'établissement", "Assister à toutes les classes sans en informer l'établissement", "Modifier eux-mêmes le contenu des programmes scolaires"],
+    correct: 1,
+    explanation: "Les parents d'élève ont le droit d'être informés de la scolarité de leur enfant et de participer à la vie de l'établissement, notamment par l'intermédiaire de représentants élus au conseil d'école ou au conseil d'administration."
+  },
+  {
+    id: "T_CR129",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Qui peut manger à la cantine scolaire ?",
+    a: ["Uniquement les enfants de nationalité française", "Tout enfant scolarisé dans l'établissement, sous réserve des places disponibles et des règles fixées par la collectivité", "Uniquement les enfants dont les deux parents travaillent", "Uniquement les enfants du primaire, jamais ceux du collège"],
+    correct: 1,
+    explanation: "Tout enfant scolarisé dans l'établissement peut en principe accéder à la cantine scolaire, sous réserve des places disponibles et des modalités d'inscription fixées par la commune ou la collectivité gestionnaire."
+  },
+  {
+    id: "T_CR130",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À quel âge commence l'instruction obligatoire des enfants en France ?",
+    a: ["À 6 ans", "À 3 ans", "À 5 ans", "À 4 ans"],
+    correct: 1,
+    explanation: "Depuis la loi « pour une école de la confiance » de 2019, l'instruction est obligatoire dès l'âge de 3 ans, et non plus 6 ans comme auparavant."
+  },
+  {
+    id: "T_CR131",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel est l'âge de la majorité en France ?",
+    a: ["16 ans", "18 ans", "21 ans", "20 ans"],
+    correct: 1,
+    explanation: "L'âge de la majorité légale est fixé à 18 ans en France. À cet âge, une personne acquiert la pleine capacité juridique (vote, contrats, responsabilité pénale majeure, etc.)."
+  },
+  {
+    id: "T_CR132",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À l'école, il est interdit aux parents de :",
+    a: ["S'inscrire aux réunions d'information organisées par l'établissement", "Intervenir directement pour régler un différend entre enfants au sein de l'établissement, sans passer par l'équipe éducative", "Voter aux élections des représentants de parents d'élèves", "Demander un rendez-vous avec un enseignant"],
+    correct: 1,
+    explanation: "Il est interdit aux parents d'intervenir directement au sein de l'établissement pour régler un différend entre enfants : toute difficulté doit être signalée à l'équipe éducative, seule habilitée à intervenir."
+  },
+  {
+    id: "T_CR133",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Quel motif d'absence est accepté par l'école ?",
+    a: ["Un départ en vacances hors des périodes scolaires pour éviter la foule", "Une maladie de l'enfant, justifiée par un certificat médical si nécessaire", "Un désaccord des parents avec un enseignant", "Une simple convenance personnelle sans justificatif"],
+    correct: 1,
+    explanation: "La maladie de l'enfant, justifiée le cas échéant par un certificat médical, est un motif d'absence accepté par l'école. Les absences pour convenance personnelle ne sont en principe pas autorisées."
+  },
+  {
+    id: "T_CR134",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
+    a: ["Une simple lettre d'avertissement sans autre conséquence", "Des poursuites pénales pouvant aller jusqu'à une amende et une peine d'emprisonnement", "La perte automatique de l'autorité parentale sans procédure", "Aucune sanction n'est prévue par la loi"],
+    correct: 1,
+    explanation: "Le non-respect de l'obligation d'instruction peut entraîner des poursuites pénales, avec des sanctions pouvant aller jusqu'à une amende et une peine d'emprisonnement, en plus d'un accompagnement social préalable des familles."
+  },
+  {
+    id: "T_CR135",
+    theme: "Vivre en société approfondi — niveau CR", macro: "Thème 6 — Niveau carte de résident",
+    q: "À l'école, un enfant en situation de handicap :",
+    a: ["Ne peut pas être scolarisé dans une école ordinaire", "A le droit d'être scolarisé, si possible en milieu ordinaire, avec les aménagements et accompagnements nécessaires", "Doit obligatoirement être scolarisé dans un établissement spécialisé privé", "N'a accès à l'instruction qu'à partir de 6 ans"],
+    correct: 1,
+    explanation: "Un enfant en situation de handicap a le droit d'être scolarisé, en priorité en milieu ordinaire, avec les aménagements et accompagnements nécessaires (AESH, matériel adapté...), conformément au principe d'école inclusive."
+  },
+
 ];
 
 // ==========================================
@@ -1783,6 +2654,12 @@ function startExam(mode) {
   } else if (mode === 'erreurs') {
     examQuestions = DATABASE_QUESTIONS.filter(q => erreursGlobales.includes(q.id));
     examQuestions.sort(() => Math.random() - 0.5);
+
+  } else if (mode === 'cr') {
+    // Questions avancées, spécifiques au niveau carte de résident
+    let poolCR = DATABASE_QUESTIONS.filter(q => q.macro === "Thème 6 — Niveau carte de résident");
+    poolCR.sort(() => Math.random() - 0.5);
+    examQuestions = poolCR.slice(0, 40);
   }
 
   // Initialisation des éléments de l'affichage détaillé des compteurs
@@ -1794,7 +2671,15 @@ function startExam(mode) {
 
   let badge = document.getElementById("diff-badge");
   if (badge) {
-    badge.style.display = difficulte === "difficile" ? "inline-block" : "none";
+    if (mode === "cr") {
+      badge.innerText = difficulte === "difficile" ? "Niveau CR · Chrono" : "Niveau CR";
+      badge.style.display = "inline-block";
+    } else if (difficulte === "difficile") {
+      badge.innerText = "Mode difficile";
+      badge.style.display = "inline-block";
+    } else {
+      badge.style.display = "none";
+    }
   }
   
   document.getElementById("home-screen").style.display = "none";
@@ -1957,7 +2842,7 @@ function quitterEnCoursExamen() {
     clearInterval(timer);
     clearInterval(qTimer);
     
-    if (currentMode === 'suivi' || currentMode === 'erreurs') {
+    if (currentMode === 'suivi' || currentMode === 'erreurs' || currentMode === 'cr') {
       let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
       sessionErrors.forEach(id => {
@@ -1988,7 +2873,7 @@ function finDeLExamen() {
   document.getElementById("final-score").innerText = score;
   document.getElementById("final-total").innerText = examQuestions.length;
 
-  if (currentMode === 'suivi' || currentMode === 'erreurs') {
+  if (currentMode === 'suivi' || currentMode === 'erreurs' || currentMode === 'cr') {
     let erreursGlobales = JSON.parse(localStorage.getItem('civique_erreurs')) || [];
 
     sessionErrors.forEach(id => {
