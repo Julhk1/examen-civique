@@ -33,6 +33,11 @@
 
 * { box-sizing: border-box; }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--corps);
   background-color: var(--fond);
@@ -40,15 +45,28 @@ body {
     radial-gradient(circle at 10% 0%, rgba(0, 0, 145, 0.05), transparent 45%),
     radial-gradient(circle at 90% 100%, rgba(201, 24, 74, 0.04), transparent 40%);
   margin: 0;
-  padding: 32px 16px 48px;
+  padding: 32px 16px calc(48px + env(safe-area-inset-bottom));
+  padding-left: calc(16px + env(safe-area-inset-left));
+  padding-right: calc(16px + env(safe-area-inset-right));
   color: var(--texte);
   min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .dossier {
   max-width: 620px;
   margin: 0 auto;
+  width: 100%;
+}
+
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* ---------------------------------------------
@@ -253,6 +271,7 @@ h2 {
 
 .btn-principal {
   padding: 15px 18px;
+  min-height: 48px;
   font-size: 14.5px;
   font-weight: 600;
   font-family: var(--corps);
@@ -266,6 +285,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  width: 100%;
 }
 .btn-principal:hover { background-color: var(--bleu-hover); }
 .btn-principal:active { transform: scale(0.99); }
@@ -280,6 +300,8 @@ h2 {
 .btn-secondaire:hover { background-color: #1F1F27; }
 .btn-rouge { background-color: var(--rouge-marianne); }
 .btn-rouge:hover { background-color: #A50F3D; }
+.btn-cr { background-color: var(--vert-valide); }
+.btn-cr:hover { background-color: #0F5A2E; }
 
 .btn-reset {
   background: none;
@@ -375,6 +397,7 @@ h2 {
 
 .answer-btn {
   padding: 15px 18px;
+  min-height: 48px;
   font-size: 14.5px;
   font-family: var(--corps);
   text-align: left;
@@ -386,6 +409,7 @@ h2 {
   transition: all 0.15s;
   line-height: 1.35;
   font-weight: 500;
+  width: 100%;
 }
 .answer-btn:hover:not(:disabled) {
   background-color: var(--fond);
@@ -479,21 +503,80 @@ button:focus-visible {
 }
 
 /* ---------------------------------------------
-   Petits écrans
+   Petits écrans (tablettes / grands mobiles)
+   --------------------------------------------- */
+@media (max-width: 600px) {
+  .dossier { max-width: 100%; }
+  .quiz-container { border-radius: 0 0 var(--radius) var(--radius); }
+  #info { font-size: 12.5px; }
+  .stat-box { padding: 6px 10px; font-size: 11.5px; }
+}
+
+/* ---------------------------------------------
+   Petits écrans (mobiles)
    --------------------------------------------- */
 @media (max-width: 480px) {
-  body { padding: 16px 10px 32px; }
-  .header-inner { padding: 22px 20px 18px; }
-  .dossier-header h1 { font-size: 22px; }
-  .quiz-container { padding: 20px 18px 24px; }
-  h2 { font-size: 17px; }
-  .answer-btn { padding: 13px 15px; font-size: 14px; }
-  .niveau-toggle { grid-template-columns: 1fr; }
-  .action-quiz-bar { flex-direction: column-reverse; }
-  .btn-quit-mid { width: 100%; padding: 12px; }
-  .stats-grid { flex-direction: column; }
-  .stat-item { display: flex; align-items: center; justify-content: space-between; text-align: left; padding: 10px 14px; }
+  body { padding: 12px 8px 28px; padding-bottom: calc(28px + env(safe-area-inset-bottom)); }
+  .header-inner { padding: 20px 16px 16px; }
+  .eyebrow { font-size: 10px; }
+  .dossier-header h1 { font-size: 20px; line-height: 1.25; }
+  .quiz-container { padding: 18px 14px 22px; }
+  h2 { font-size: 16.5px; margin: 8px 0 18px; line-height: 1.4; }
+
+  .stats-globales { padding: 16px 14px 14px; margin-bottom: 18px; }
+  .stats-grid { flex-direction: column; gap: 8px; }
+  .stat-item { display: flex; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; padding: 10px 14px; }
   .stat-num { font-size: 18px; }
+  .stats-total { font-size: 11.5px; }
+
+  .niveau-select { margin-bottom: 18px; }
+  .niveau-toggle { grid-template-columns: 1fr; gap: 8px; }
+  .niveau-btn { padding: 12px 14px; }
+
+  .menu-boutons { gap: 8px; }
+  .btn-principal { padding: 13px 15px; font-size: 14px; }
+  .btn-sub { font-size: 11.5px; }
+  .btn-reset { font-size: 12px; margin-top: 12px; padding: 6px 0; }
+
+  #info { flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .stat-box { padding: 5px 10px; font-size: 11.5px; }
+  .diff-badge { font-size: 10px; padding: 4px 8px; }
+  #progress { font-size: 11px; padding: 4px 10px; }
+  .theme-tag { font-size: 11px; margin-top: 8px; }
+
+  #answers { gap: 8px; margin: 14px 0; }
+  .answer-btn { padding: 13px 15px; font-size: 13.5px; }
+  .feedback-box { padding: 13px 14px; font-size: 13px; margin: 14px 0; }
+  .fb-title { font-size: 13px; }
+
+  .score-final { font-size: 26px; margin: 12px 0 18px; }
+
+  .action-quiz-bar { flex-direction: column-reverse; gap: 8px; margin-top: 18px; }
+  .btn-quit-mid { width: 100%; padding: 12px; font-size: 12.5px; }
+  #next-btn { padding: 13px 16px; font-size: 13.5px; }
+}
+
+/* ---------------------------------------------
+   Très petits écrans (ex : iPhone SE)
+   --------------------------------------------- */
+@media (max-width: 360px) {
+  .dossier-header h1 { font-size: 18px; }
+  h2 { font-size: 15.5px; }
+  .answer-btn, .btn-principal { font-size: 13px; padding: 12px 13px; }
+  .stat-num { font-size: 16px; }
+}
+
+/* ---------------------------------------------
+   Orientation paysage sur mobile (hauteur réduite)
+   --------------------------------------------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  body { padding-top: 10px; padding-bottom: 10px; }
+  .header-inner { padding: 14px 20px 12px; }
+  .dossier-header h1 { font-size: 17px; }
+  .stats-globales { margin-bottom: 12px; padding: 12px 14px 10px; }
+  .niveau-select { margin-bottom: 12px; }
+  #answers { margin: 10px 0; gap: 6px; }
+  .answer-btn { padding: 10px 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
