@@ -2,7 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000091">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Dossier de préparation — Examen civique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,6 +71,10 @@
           <button id="mode-flash-btn" class="btn-principal btn-secondaire" onclick="startExam('flash')">
             Mode Aléatoire Flash
             <span class="btn-sub">40 questions au hasard, sans enregistrement</span>
+          </button>
+          <button id="mode-cr-btn" class="btn-principal btn-cr" onclick="startExam('cr')">
+            Mode Carte de Résident (CR)
+            <span class="btn-sub">40 questions avancées, exigées pour la carte de résident</span>
           </button>
           <button id="mode-erreurs-btn" class="btn-principal btn-rouge" onclick="startExam('erreurs')" style="display:none;">
             Réviser la boîte à erreurs
